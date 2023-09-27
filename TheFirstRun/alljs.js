@@ -210,7 +210,8 @@ window.isLoading = (bool) => {
 window.setting = {
     countdown: 60,
     font: { fontFamily: 'Arial', fontSize: 38 },
-    gameinfo: {name: 'FirstRun'},
+    background: { type: 'gradient', color: ['#89f7fe', '#66a6ff'] },
+    gameinfo: {name: 'TheFirstRun'},
     gameIntro: {gameIntro_title:'', gameIntro_detail:''},
   };
   
