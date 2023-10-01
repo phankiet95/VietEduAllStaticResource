@@ -1100,8 +1100,8 @@ $(document).ready(function () {
 
 function prepareSpinQuestion() {
   var padding = { top: 20, right: 40, bottom: 0, left: 0 },
-    w = 500 - padding.left - padding.right,
-    h = 500 - padding.top - padding.bottom,
+    w = 600 - padding.left - padding.right,
+    h = 600 - padding.top - padding.bottom,
     r = Math.min(w, h) / 2,
     rotation = 0,
     oldrotation = 0,
