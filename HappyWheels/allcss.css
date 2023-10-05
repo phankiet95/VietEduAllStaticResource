@@ -365,7 +365,7 @@ html body {
   display: inline-block;
   color: white;
   text-align: center;
-  padding: 8px 16px;
+  padding: 8px 8px;
   text-decoration: none;
   border-radius: 5px;
 }
@@ -398,7 +398,6 @@ html body {
   background-position: right 0.2rem center;
 }
 
-
 .main_container #createPage .main_view {
   overflow: hidden;
   margin-right: 0;
@@ -411,11 +410,12 @@ html body {
   background: #f1f1f1;
   padding-bottom: 10px;
   padding-right: 0px;
-  min-width: 470px;
+  width: 25%;
+  min-width: 280px;
 }
 
 .main_container #createPage .main_view #leftPanel:not(.active) {
-  margin-left: -470px;
+  margin-left: -25%;
 }
 
 .main_container #createPage .main_view #questionList .input-group-prepend .input-group-text {
@@ -431,7 +431,7 @@ html body {
   padding-right: 5px;
   position: relative;
   background: #f1f1f1;
-  height: 89vh;
+  height: 89%;
   overflow-y: scroll;
 }
 
@@ -471,7 +471,7 @@ html body {
 }
 
 .main_container #createPage .main_view .hideQuestionList.active {
-  margin-left: 470px;
+  margin-left: 25%;
 }
 
 .main_container #createPage .main_view .hideQuestionList i {
@@ -488,10 +488,10 @@ html body {
 
 .questionMediaPreview {
   position: absolute;
-  width: 550px;
-  height: 350px;
-  top: -350px;
-  left: 550px;
+  width: 637px;
+  height: 410px;
+  top: -420px;
+  left: 105%;
 
   backdrop-filter: blur(10px);
   background-color: rgba(255, 255, 255, 0.226);
@@ -542,8 +542,6 @@ top: 80px;
   cursor: pointer;
 }
 
-
-
 .slideList .gameHeader .timerbar {
   -webkit-transform: scale(0.8);
           transform: scale(0.8);
@@ -573,7 +571,6 @@ top: 80px;
   pointer-events: none;
 }
 
-
 .gamePlayMainPanel {
   transition: all 2s;
 }
@@ -589,8 +586,8 @@ top: 80px;
 .questionDisplay {
   height: 34%;
   width: 75%;
-  top: 100vh;
-  left: 8vh;
+  top: 100%;
+  left: 8%;
   position: absolute;
   z-index: 1;
   /* padding: 10px; */
@@ -598,15 +595,15 @@ top: 80px;
 }
 
 .questionDisplayActive {
-  top: 62vh;
+  top: 62%;
 }
 
 .resultDisplayPanel {
   padding: 10px;
   height: 88%;
   width: 90%;
-  top: 10vh;
-  left: 8vh;
+  top: 10%;
+  left: 8%;
   overflow-y: auto;
 }
 
@@ -627,8 +624,8 @@ top: 80px;
 .bottombar {
   height: 7%;
   width: 1%;
-  top: 74vh;
-  left: -1vh;
+  top: 74%;
+  left: -1%;
   position: absolute;
   transition: all 1s;
 }
@@ -638,10 +635,10 @@ top: 80px;
 }
 
 .questionMedia {
-  height: 60vh;
-  width: 100vh;
+  height: 490px;
+  width: 762px;
   top: -70%;
-  left: 63vh;
+  left: 37%;
   position: absolute;
   z-index: 1;
   transition: all 0.5s;
@@ -657,7 +654,7 @@ top: 80px;
 }
 
 #createPage .main_view .hideQuestionList.active ~ .slideList #mainGamePlayPanel .questionMedia{
-  width: 61vh;
+  width: 61%;
 }
 
 /* spin */
@@ -667,7 +664,7 @@ top: 80px;
   align-items: center;
   position: absolute;
   top: -70%;
-  left: 8vh;
+  left: 2%;
   z-index: 1;
   transition: all 0.5s;
 }
@@ -769,7 +766,7 @@ top: 80px;
 
 .flip-question-answer-inner {
   position: relative;
-  width: 100%;
+  width: 97%;
   height: 100%;
   transition: transform 0.6s;
   transform-style: preserve-3d;
@@ -802,13 +799,12 @@ top: 80px;
 }
 
 .scorebar {
-  height: 180px;
-  width: 210px;
-  top: 68vh;
+  height: 160px;
+  width: 190px;
+  top: 68%;
   right: -15%;
   position: absolute;
   z-index: 1;
-  padding: 10px;
   text-align: center;
   transition: all 1s;
 }
@@ -818,14 +814,14 @@ top: 80px;
 }
 
 #score-text {
-  font-size: 105px;
+  font-size: 98px;
   font-weight: bolder;
 }
 
 .JudgementBar {
   height: 100px;
   width: 250px;
-  top: 40vh;
+  top: 40%;
   right: -30%;
   position: absolute;
   z-index: 1;
@@ -839,9 +835,9 @@ top: 80px;
 }
 
 .TimerBar {
-  height: 70px;
-  width: 250px;
-  top: 30vh;
+  height: 65px;
+  width: 220px;
+  top: 30%;
   right: -25%;
   position: absolute;
   z-index: 1;
@@ -960,7 +956,7 @@ font-size: 70px;
 .StartAgainBar {
   height: 30px;
   width: 100px;
-  top: 95vh;
+  top: 95%;
   right: 5%;
   position: absolute;
   z-index: 1;

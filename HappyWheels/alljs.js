@@ -1154,6 +1154,7 @@ function prepareSpinQuestion() {
       return data[i].label;
     });
   spin = (d) => {
+    container.on("click",destroyMedia());
     audio_spin_chart.play();
     spinText.attr("class", "");
     container.on("click", null);
