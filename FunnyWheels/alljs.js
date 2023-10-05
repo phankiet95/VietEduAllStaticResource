@@ -539,9 +539,11 @@ function updateAmount() {
 }
 
 function prepareSpinQuestion() {
+  var window_w = window.innerWidth;
+  var window_h = window.innerHeight;
   var padding = { top: 20, right: 40, bottom: 0, left: 0 },
-    w = 1000 - padding.left - padding.right,
-    h = 900 - padding.top - padding.bottom,
+    w = window_w * 0.85 - padding.left - padding.right,
+    h = window_h * 0.85 - padding.top - padding.bottom,
     r = Math.min(w, h) / 2,
     rotation = 0,
     oldrotation = 0,
