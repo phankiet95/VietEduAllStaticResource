@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OlympiaCrossword</title>
+  <link rel="icon" type="image/png" name="gameIcon" sizes="16x16" href="" />
+
+  <!-- CSS -->
+  <!-- 1. Common CSS -->
+  <link rel="stylesheet" href="frameAsset/css/all.min.css">
+  <link rel="stylesheet" href="frameAsset/css/jquery-ui.css">
+  <link rel="stylesheet" href="frameAsset/css/animate.min.css">
+  <link rel="stylesheet" href="frameAsset/css/bootstrap.min.css">
+  <link rel="stylesheet" href="frameAsset/css/hover.css">
+
+  <!-- 2. Game Frame CSS -->
+  <link rel="stylesheet" href="frameAsset/css/gameFrame.css">
+  <link rel="stylesheet" href="frameAsset/css/gameIntro.css">
+  <link rel="stylesheet" href="frameAsset/css/gameIntroControl.css">
+  <link rel="stylesheet" href="frameAsset/css/setupPanel.css">
+
+  <!-- 4. Inject Function CSS -->
+  <link rel="stylesheet" href="frameAsset/css/Recording_utilities.css">
+
+  <!-- 5. Game main CSS -->
+  <link rel="stylesheet" href="CustomAsset/css/main.css">
+  <link rel="stylesheet" href="CustomAsset/css/slide.css">
+
+  <!-- Be injected by Back-end -->
+  <style>
+    @charset "UTF-8";
+
+  </style>
+
+  <script type="text/javascript">
+
+  </script>
+  <!-- Be injected by Back-end -->
+
+
+</head>
+
+<body>
+
+  <!-- GameFrame - Horizontal Navigation -->
+  <ul id="horizontalNavigation">
+    <li id="nav_composerPanel" class="active"> Tạo trò chơi</li>
+    <li id="nav_slideshowPanel"> Trình chiếu</li>
+    <li id="nav_introPanel" class="d-none"> Thông tin mở đầu</li>
+    <li style="float:right" id="nav_importGameMenu" > <label style="cursor:pointer" id="importBtn"><input id="nav_importGame" style="display:none" type="file" accept=".html, .VietEdusoft"> Mở trò chơi </label></li>
+    <li id="nav_exportGame" style="float:right"> Lưu trò chơi</li>
+  </ul>
+
+  <!-- GameFrame - Game Composer Panel -->
+  <div id="tab_composerPanel" class="page">
+    <div class="row">
+      <!-- Question composer -->
+      <form id="questionForm" class="form-inline col-4">
+        <div id="questionList" class="row m-0 align-content-start"></div>
+        <div id="addQuesButtonPanel">
+          <button id="btnAddQuestion" type="button" class="btn btn-primary"><i class="fa-solid fa-plus"></i> Thêm câu hỏi</button>
+          <button id="btnDelQuestion" type="button" class="btn btn-danger" disabled><i class="fa-solid fa-minus"></i> Xóa câu hỏi</button>
+        </div>
+      </form>
+
+      <!-- Question preview -->
+      <div id="composerPreview" class="col p-0">
+        <ul id="gameConfigurationBar">
+          <li><span>Đếm ngược: </span><input type="text" id="config_countdown" maxlength=3 size=3 value="30"/></li>
+        </ul>
+        <div id="slideList" class="row m-0 pt-3 d-flex align-content-start"></div>
+      </div>
+
+    </div>
+  </div>
+  <!-- /Game Composer Panel -->
+
+  <!-- GameFrame - SlideShow Panel -->
+  <div id="tab_SlideShowPanel">
+
+    <div id="slideWrapPage" class="slideWrapPage">
+      <div class="slideShow_BackgroundHolder"><!-- All background components will be injected here --></div>
+
+      <div id="questionOpenPanelWrapper">
+        <div id="questionOpenPanel">
+          <i class="fa-solid fa-equals hvr-bounce-in" id="questionClose"></i>
+          <!-- Media in question-->
+          <div id="questionMediaPanel">
+            <div id=""><img id ="questionMedia_img" class="d-none hvr-bob" style="max-width:80%; border-radius: 20px;"></div>
+            <audio id="questionMedia_audio" class="d-none" controls="" autoplay style="width:50%" ></audio>
+            <div><video id="questionMedia_video" class="d-none" controls="none" style="max-width:80%; border-radius: 20px; pointer-events: auto;"></video></div>
+          </div>
+          <div id="TextShowSpan"><span id="questionText" style="font-size:2.5rem">This is sample question</span></div>
+          <div id="qActionPanel">
+            <div id="countdownWrap" class="d-flex justify-content-center align-items-center hvr-reveal hvr-bob">
+              <strong id="countdown"></strong>
+            </div>
+            <div id="answerJudge">
+              <div class="tick hvr-bob"><span>✓</span></div>
+              <div class="reject hvr-bob"><span>✗</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="slidePage" class="col pt-5 align-content-start">
+
+      </div>
+    </div>
+
+    <!-- GameFrame - SideBar SetupPanel-->
+    <div id="wrapperSidebar" class="wrapperSidebar">
+      <button type="button" id="setupBtn" class="btn setupBtn hvr-bounce-in">
+        <span><i class="fa-solid fa-gear" style="font-size: x-large; color: white;"></i></span>
+      </button>
+      <nav id="setupPanel" class="setupPanel">
+        <ul>
+          <li><span>Lớp nền phủ: </span><select class="form-select-sm selectWidget border-0" id="backgroundList"></select>
+            <div class="mt-12">
+              <label class="form-check-label">Độ trong suốt: </label>
+              <input id="colorOverlayRange" type="range" class="widget" min="1" max="100" value="30" style="margin-top: 5px;">
+            </div>
+          </li>
+          <li>
+            <span>Chọn ảnh, video : </span><input type="file" id="inputBackgroundMedia" class="inputBackgroundMedia" accept="image/*, video/*" style="display:none">
+            <div class="widget">
+              <label for="inputBackgroundMedia" id="labelInputFile" class="smallbutton labelInputFile">Chọn file</label>
+              <label class="smallbutton" id="destroyBackgroundMedia" class="destroyBackgroundMedia"> Hủy </label>
+            </div>
+            <div class="mt-12">
+              <label class="form-check-label">Âm lượng video: </label>
+              <input id="volumeRange" type="range" class="widget" min="0" max="1" step="0.1" value="0.8" style="margin-top: 5px;">
+            </div>
+
+            <div class="mt-12"><span>Ảnh sẵn: </span><select class="form-select-sm selectWidget border-0" id="availableBackgroundList" class="availableBackgroundList"></select></div>
+            <div class="mt-12 d-none"><span>Video: </span><select class="form-select-sm selectWidget border-0" id="availableBackgroundVideoList" class="availableBackgroundVideoList"></select></div>
+          </li>
+          <li>
+            <span>Chọn nhạc nền : </span><input type="file" id="inputBackgroundAudio" class="inputBackgroundAudio" accept="audio/*" style="display:none">
+            <div class="widget">
+              <label for="inputBackgroundAudio" class="smallbutton labelInputFile">Chọn file</label>
+              <label class="smallbutton" id="destroyBackgroundAudio" class="destroyBackgroundAudio"> Hủy </label>
+            </div>
+            <audio controls autoplay loop src="data:audio/ogg;base64,BASE64CODE" class="mt-12" id="backgroundSlideAudio" style="width:100%"/>
+          </li>
+          <li>
+            <div class="mt-12"><span>Hiệu ứng: </span><select class="form-select-sm selectWidget border-0" id="textureEffectList"></select>
+              <div class="mt-12">
+                <label class="form-check-label">Độ trong suốt: </label>
+                <input id="textureEffectRange" type="range" class="widget" min="1" max="100" value="40" style="margin-top: 5px;">
+              </div>
+            </div>
+          </li>
+          <!-- Custom Part -->
+          <li><span>Màu chữ </span><input type="color" class="color p-0 border-0 widget" value="#ffffff"></li>
+          <li><span>Màu ô chữ</span><input type="color" class="bgColor p-0 border-0 widget" value="#6768ab"></li>
+          <li><span>Màu từ khóa </span><input type="color" class="keyColor p-0 border-0 widget" value="#e74c3c"></li>
+          <li>
+            <label class="d-flex">
+              <span id="fullscreenbtn" class="smallbutton" style="line-height: 30px; width:100%">Bật/Tắt full màn hình</span>
+            </label>
+          </li>
+          <li>
+            <div>
+              <a style="color:white" href="https://www.vietedusoft.vn/" target="_blank">Nền tảng phát triển trò chơi giáo dục<br>Vietedusoft.vn</a>
+            </div>
+          </li>
+          <!-- /Custom Part -->
+        </ul>
+      </nav>
+    </div>
+    <!-- /SideBar SetupPanel-->
+
+    <!-- Custom part -->
+
+    <!-- Custom part -->
+  </div>
+  <!-- /SlideShow Panel -->
+
+  <!-- Intro Panel -->
+  <!-- <div id="tab_introPanel">
+    <div id="slideWrapPage" class="slideWrapPage">
+
+      <div id="introBody">
+        <div id="gameIntro5">
+          <div id="introPanel" class="backGround blue">
+            <div class="slideShow_BackgroundHolder"></div>
+              <div class="mainPanel" id="introPanelContent">
+                  <div class="gameTitlePanel">
+                      <div class="gameTitle"><span id="gameTitle" contenteditable="true">Trò chơi ô chữ về chủ đề Lịch Sử</span></div>
+                      <div class="gameGuide"> <span id="gameGuide" contenteditable="true">Luật chơi : </span> </div>
+                      <div class="gameStart"> <span contenteditable="true" id="gameintroStart">START</span> </div>
+                  </div>
+                  <div class="gameComposer"> <span id="gameComposer" contenteditable="true">VietEdusoft - Secondary School</span> </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="introWrapperSidebar" class="wrapperSidebar">
+      <button type="button" id="setupBtn" class="btn setupBtn">
+        <span><i class="fa-solid fa-gear" style="font-size: x-large; color: white;"></i></span>
+      </button>
+      <nav id="setupPanel2" class="setupPanel">
+      </nav>
+    </div>
+  </div>
+  /Intro Panel -->
+
+  <!-- All Game Custom Sound-->
+  <div id="backgroundSound">
+    <audio id="audio_correct" name="audio_correct" src=""></audio>
+    <audio id="audio_incorrect" name="audio_incorrect" src=""></audio>
+    <audio id="audio_select" name="audio_select" src=""></audio>
+    <audio id="audio_tiktok" name="audio_tiktok" loop src=""></audio>
+    <audio id="audio_timeup" name="audio_timeup" src=""></audio>
+  </div>
+  <!-- All Game Custom Sound-->
+
+</body>
+
+  <!-- JS -->
+  <!-- 1. jquery -->
+  <script src="frameAsset/js/jquery-3.6.0.min.js"></script>
+  <script src="frameAsset/js/jquery-ui.js"></script>
+
+  <!-- 2. Const Variable -->
+  <script src="frameAsset/js/GlobalVariable.js"></script>
+  <script src="frameAsset/js/GameFrameAsset.js"></script>
+  <script src="frameAsset/js/GameVideoAsset.js"></script>
+  <script src="frameAsset/js/gameFrame.js"></script>
+  <script src="frameAsset/js/jquery.injectCSS.js"></script>
+
+  <!-- 3. Utility -->
+  <script src="frameAsset/js/UtilityFuntion.js"></script>
+  <script src="frameAsset/js/GamePlayAssetLoader.js"></script>
+  <script src="frameAsset/js/GameIntro.js"></script>
+  <script src="frameAsset/js/SetupPanel.js"></script>
+  <script src="frameAsset/js/record.js"></script> <!-- Only inject in case game has questions-media files -->
+
+  <!-- 4. Custom Asset -->
+  <script src="CustomAsset/js/GameCustomAsset.js"></script>
+
+  <!-- 5. Game -->
+  <script src="CustomAsset/js/const.js"></script>
+  <script src="CustomAsset/js/slide.js"></script>
+  <script src="CustomAsset/js/main.js"></script>
+  <script src="CustomAsset/js/countdown.js"></script>
+
+</html>

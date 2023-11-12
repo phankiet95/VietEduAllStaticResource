@@ -1,0 +1,114 @@
+
+/* horizontal Navigation */
+#horizontalNavigation {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #4776e6;
+    min-width: 500px;
+}
+#horizontalNavigation li {
+    cursor: pointer;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 4px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+#horizontalNavigation li.active {
+    background-color: #ff7062 !important;
+}
+
+
+/* ConfigurationBar */
+
+#tab_composerPanel #gameConfigurationBar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#tab_composerPanel #gameConfigurationBar li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+/* Game Composer Panel */
+
+#tab_composerPanel #questionList {
+    overflow-y: scroll;
+    padding-bottom: 20px;
+    background: #f6f7fb;
+    padding: 10px;
+    padding-top: 15px;
+    height: 89vh;
+  }
+  
+#tab_composerPanel #questionForm {
+    padding-right: 0px;
+    min-width: 300px;
+}
+
+#tab_composerPanel #addQuesButtonPanel {
+    height: 10vh;
+    padding: 10px 15px;
+}
+
+#tab_composerPanel #composerPreview {
+    min-width: 600px;
+}
+
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: rgb(132, 210, 241);
+	
+	background-image: -webkit-gradient(linear, 0 0, 0 100%,color-stop(.5, rgba(255, 255, 255, .2)),color-stop(.5, transparent), to(transparent));
+}
+
+input[type="color"] {
+  cursor: pointer;
+}
+
+/* Game SlideShow Panel */
+
+.backgroundColorLayer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.backgroundPictureLayer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: 100% 100%;
+}
+
+.backgroundSlideVideo {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+
+.slideWrapPage {
+    width: 101%;
+    height: 100vh;
+    position: absolute;
+    font-size: larger;
+}
+
