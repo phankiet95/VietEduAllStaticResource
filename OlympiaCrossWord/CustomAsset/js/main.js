@@ -1,1 +1,321 @@
-const _0x3310bf=_0x7b14;function _0x7b14(_0x423bbe,_0x2ec9ce){const _0x2e9186=_0x2e91();return _0x7b14=function(_0x7b140,_0x2d32ef){_0x7b140=_0x7b140-0x196;let _0x12c743=_0x2e9186[_0x7b140];return _0x12c743;},_0x7b14(_0x423bbe,_0x2ec9ce);}function _0x2e91(){const _0x4545d7=['gameinfo','font-family','UTF-8','append','<p\x20id=\x22slideDataTxt\x22\x20class=\x22d-none\x22>','css','.VietEduSoft','d-none','includes','#questionList,\x20#slideList,\x20#slidePage\x20.slideItem','link[rel=\x22stylesheet\x22],\x20body>:not(#slideWrapPage):not(#backgroundSlideVideo):not(#qInfoWrap):not(#backgroundSound),\x20script:not([type=\x22text/javascript\x22])','find','.slideItem','\x20opacity:\x200;','toLocaleTimeString','linear-gradient(to\x20right,\x20','answer','355uXNMYq','strTime','#fontFamily','2897566MriCuE','#fontSize','addClass','.inputAnswer','readAsText','parse','val','attr','second','<strong>1</strong>','32046atlYun','qNo','bind','disabled','download','18BlsSHB','input','#slidePage\x20.input-group-text\x20.show','#backgroundSlideVideo','stringify','#slideList\x20.slideItem\x20>\x20.input-group-text','remove','empty','#slidePage','removeChild','#textureEffectRange','prepend','text','slice','#slideList>.slideItem','body','.inputQuestion','appendChild','children','index','wrapAll','\x20background-color:\x20','10MBfAEA','display','#countdown','background-image','#slidePage\x20.slideItem','countdown','questionid','Opacity','#questionList','click','#loading','24116bIZpoh','fontFamily','questionPanel','data','textureEffectOpactity','<div\x20class=\x22input-group\x20mr-sm-2\x20slideItem\x22></div>','base64','205752uUymoT','Crossword.html','loadFile','image','customMusic','name','#nav_composerPanel','</strong>','#questionList>.question','<div>','1512032liVCDl','length','toLocaleDateString','colorOverlayOpacity','#setupPanel\x20.bgColor','</p>','keyChar','parent','html','change','replace','siblings','input-group-text','question','none','onload','background','.qNo','font','#slideList\x20.input-group-text','.slideItem\x20>\x20.input-group-text','forEach','clone','.question','\x20#backgroundSlideAudio','.question\x20.inputAnswer','setting','music','src','data:text/plain;charset=utf-8,','each','background-color','toString','result','#slideList,\x20#backgroundColorLayer','#colorOverlayRange','removeAttr','ready','cell','video','.input-group-text','#nav_slideshowPanel','23367lKcEzl','Start\x20download\x20Data','height','undefined','<strong>','style','customBackground','removeClass','key','#questionList\x20.question','#qInfo','#btnDelQuestion','#setupPanel\x20.basic\x20.countdown','#btnAddQuestion','#backgroundAnimationLayer','href','files','#backgroundColorLayer','show','slideData','#slideList','parents','log','type','#exportHtml','fontSize','4734390VIWDXM','#slideDataTxt'];_0x2e91=function(){return _0x4545d7;};return _0x2e91();}(function(_0x19817a,_0xad240f){const _0x3dace7=_0x7b14,_0x1b390a=_0x19817a();while(!![]){try{const _0x50b880=-parseInt(_0x3dace7(0x1fc))/0x1+-parseInt(_0x3dace7(0x1f1))/0x2*(-parseInt(_0x3dace7(0x19c))/0x3)+parseInt(_0x3dace7(0x20d))/0x4+-parseInt(_0x3dace7(0x1c9))/0x5*(-parseInt(_0x3dace7(0x1d6))/0x6)+parseInt(_0x3dace7(0x1cc))/0x7+-parseInt(_0x3dace7(0x203))/0x8+-parseInt(_0x3dace7(0x1db))/0x9*(parseInt(_0x3dace7(0x1b6))/0xa);if(_0x50b880===_0xad240f)break;else _0x1b390a['push'](_0x1b390a['shift']());}catch(_0x28b95e){_0x1b390a['push'](_0x1b390a['shift']());}}}(_0x2e91,0x3418d));function addQuestion(_0x256668){const _0xb72cfa=_0x7b14;let _0xe5f16e=slideData[_0xb72cfa(0x1ff)][_0xb72cfa(0x20e)]+0x1;$(_0xb72cfa(0x1f9))['append'](window[_0xb72cfa(0x1fe)][_0xb72cfa(0x217)](_0xb72cfa(0x1d5),_0xb72cfa(0x1a0)+_0xe5f16e+_0xb72cfa(0x20a))),$(_0xb72cfa(0x1b0))[_0xb72cfa(0x1bb)]('<div\x20class=\x22input-group\x20mr-sm-2\x20slideItem\x22></div>');if(typeof _0x256668==_0xb72cfa(0x19f))slideData[_0xb72cfa(0x1ff)]=[...slideData[_0xb72cfa(0x1ff)],{'question':'','answer':'','keyChar':-0x1,'file':null}];typeof _0x256668!=_0xb72cfa(0x19f)&&$(_0xb72cfa(0x20b))['eq'](_0x256668['id'])[_0xb72cfa(0x1c3)](_0xb72cfa(0x1eb))['val'](_0x256668['question']),$(_0xb72cfa(0x20b))['length']>0x1&&$(_0xb72cfa(0x1a7))[_0xb72cfa(0x196)]('disabled');}function addQuestionFromFile(_0x557a5c,_0x2c428f){const _0x2fdd39=_0x7b14;let _0x3dd448=_0x2c428f;$(_0x2fdd39(0x1f9))['append'](window[_0x2fdd39(0x1fe)][_0x2fdd39(0x217)](_0x2fdd39(0x1d5),_0x2fdd39(0x1a0)+_0x3dd448+_0x2fdd39(0x20a))),$(_0x2fdd39(0x1b0))['append'](_0x2fdd39(0x201));if(typeof _0x557a5c==_0x2fdd39(0x19f))slideData[_0x2fdd39(0x1ff)]=[...slideData[_0x2fdd39(0x1ff)],{'question':'','answer':'','keyChar':-0x1,'file':null}];typeof _0x557a5c!='undefined'&&$(_0x2fdd39(0x20b))['eq'](_0x557a5c['id'])[_0x2fdd39(0x1c3)]('.inputQuestion')['val'](_0x557a5c[_0x2fdd39(0x21a)]),$(_0x2fdd39(0x20b))['length']>0x1&&$(_0x2fdd39(0x1a7))[_0x2fdd39(0x196)]('disabled');}function getTimeForFileName(){const _0x1e6785=_0x7b14;let _0x2b65aa=new Date(),_0x987f2b=_0x2b65aa[_0x1e6785(0x20f)]()[_0x1e6785(0x217)]('/','-')+'\x20'+_0x2b65aa[_0x1e6785(0x1c6)]()['replace'](':','-');return console[_0x1e6785(0x1b2)](_0x1e6785(0x1ca),_0x987f2b),_0x987f2b;}$(document)[_0x3310bf(0x197)](function(){const _0x38e620=_0x3310bf;addQuestion(),$(_0x38e620(0x1b0))[_0x38e620(0x1bd)](_0x38e620(0x1b9),slideData['font']['fontFamily']),$('#slidePage')['css'](_0x38e620(0x1b9),slideData['font'][_0x38e620(0x1fd)]),$(_0x38e620(0x1a9))[_0x38e620(0x1d8)]({'click':function(){addQuestion();}}),$('#btnDelQuestion')[_0x38e620(0x1d8)]({'click':function(){const _0xc54b53=_0x38e620;let _0x106f17=$(_0xc54b53(0x20b))[_0xc54b53(0x20e)];console['log'](_0x106f17),_0x106f17>0x1&&($(_0xc54b53(0x1a5))[_0xc54b53(0x1e8)](-0x1)[_0xc54b53(0x1e1)](),$('#slideList\x20.slideItem')[_0xc54b53(0x1e8)](-0x1)[_0xc54b53(0x1e1)](),_0x106f17-=0x1,slideData[_0xc54b53(0x1ff)]['splice'](-0x1)),_0x106f17==0x1&&$('#btnDelQuestion')[_0xc54b53(0x1d3)]('disabled',_0xc54b53(0x1d9));}}),$(document)['on'](_0x38e620(0x1dc),'.question\x20.inputQuestion',function(){const _0x178c51=_0x38e620;slideData[_0x178c51(0x1ff)][$(this)['parents'](_0x178c51(0x224))[_0x178c51(0x1ee)]()]['question']=$(this)[_0x178c51(0x1d2)]();});function _0x191d97(_0x43072e,_0x5c0857){const _0x2dcf09=_0x38e620;let {data:_0x542ca9}=slideData,{fontSize:_0x3bd667}=slideData[_0x2dcf09(0x21f)],{color:_0x40f087,bgColor:_0x242235,keyColor:_0x212445}=slideData[_0x2dcf09(0x227)][_0x2dcf09(0x198)],_0x2bf294=_0x5c0857[_0x2dcf09(0x1b1)]('.question')[_0x2dcf09(0x1ee)]();var _0x174164=$(_0x2dcf09(0x1e9))['eq'](_0x2bf294);_0x174164[_0x2dcf09(0x1e2)](),_0x542ca9[_0x2bf294][_0x2dcf09(0x1c8)]=_0x43072e;for(let _0x557cf4=0x0;_0x557cf4<_0x43072e[_0x2dcf09(0x20e)];_0x557cf4++){let _0x5b9987=(_0x43072e[_0x557cf4]=='\x20'?_0x2dcf09(0x1c5):'')+_0x2dcf09(0x1f0)+_0x242235+';\x20color:\x20'+_0x40f087+';';_0x174164[_0x2dcf09(0x1bb)](answerPanel[_0x2dcf09(0x217)](/(.+?:\s)(px.+?:\s)(px.+?:\s)(px.+?:\s)(.+?;)(.+)(<\/strong>.+)/,'$1'+cellSize+'$2'+cellSize+'$3'+cellSize+'$4'+_0x3bd667+'$5'+_0x5b9987+'$6'+_0x43072e[_0x557cf4]+'$7')),_0x542ca9[_0x2bf294][_0x2dcf09(0x213)]==_0x557cf4&&_0x174164[_0x2dcf09(0x1ed)](_0x2dcf09(0x19a))['eq'](_0x557cf4)[_0x2dcf09(0x1bd)](_0x2dcf09(0x22c),_0x212445)[_0x2dcf09(0x1ce)](_0x2dcf09(0x1a4));}}$(document)['on']('input',_0x38e620(0x226),function(){_0x191d97($(this)['val'](),$(this));});function _0x75e03b(_0x64ff0b){const _0x2e3adf=_0x38e620;let {fontFamily:_0x20c9f8,fontSize:_0x226b61}=slideData[_0x2e3adf(0x21f)],{second:_0x376d9e}=slideData['setting'][_0x2e3adf(0x1f6)],{color:_0x2d2c96,bgColor:_0x204ffd,keyColor:_0x18bd70}=slideData['setting'][_0x2e3adf(0x198)];if(_0x64ff0b=='loadFile'){$(_0x2e3adf(0x1c1))[_0x2e3adf(0x1e2)]();let _0x10d77a=0x0;slideData[_0x2e3adf(0x1ff)][_0x2e3adf(0x222)]((_0x10e396,_0x5e49d7)=>{const _0x18c51b=_0x2e3adf;_0x10d77a++,addQuestionFromFile({..._0x10e396,'id':_0x5e49d7},_0x10d77a),$(_0x18c51b(0x1a5))['eq'](_0x5e49d7)[_0x18c51b(0x1c3)](_0x18c51b(0x1cf))['val'](_0x10e396[_0x18c51b(0x1c8)]);for(let _0xd32e72=0x0;_0xd32e72<_0x10e396[_0x18c51b(0x1c8)][_0x18c51b(0x20e)];_0xd32e72++){_0x191d97(_0x10e396[_0x18c51b(0x1c8)],$('#questionList\x20.question')['eq'](_0x5e49d7)['find'](_0x18c51b(0x1cf)));}}),$(_0x2e3adf(0x1cb))[_0x2e3adf(0x1d2)](_0x20c9f8),$(_0x2e3adf(0x1cd))[_0x2e3adf(0x1d2)](_0x226b61),_0x36e355(_0x20c9f8),_0x4ca4bf(_0x226b61);let {color:_0x5d5b6c}=slideData[_0x2e3adf(0x227)][_0x2e3adf(0x21d)];$(_0x2e3adf(0x22f))[_0x2e3adf(0x1bd)](_0x2e3adf(0x1f4),_0x2e3adf(0x1c7)+_0x5d5b6c[0x0]+',\x20'+_0x5d5b6c[0x1]+')');slideData[_0x2e3adf(0x227)][_0x2e3adf(0x21d)]['colorMoving']&&$('#backgroundColorLayer')[_0x2e3adf(0x1ce)]('moving');let _0x1040a3=slideData[_0x2e3adf(0x227)][_0x2e3adf(0x21d)]['colorOverlayOpacity']+'%';$('#backgroundColorLayer')[_0x2e3adf(0x1bd)](_0x2e3adf(0x1f8),_0x1040a3),$('#countdown')[_0x2e3adf(0x1e7)](_0x376d9e),$(_0x2e3adf(0x1a8))[_0x2e3adf(0x1d2)](_0x376d9e),$('#setupPanel\x20.color')[_0x2e3adf(0x1d2)](_0x5d5b6c),$(_0x2e3adf(0x211))[_0x2e3adf(0x1d2)](_0x204ffd),$('#setupPanel\x20.keyColor')['val'](_0x18bd70);}if(typeof _0x64ff0b=='object'){_0x64ff0b['siblings']()[_0x2e3adf(0x1a3)]('key'),_0x64ff0b[_0x2e3adf(0x1ce)](_0x2e3adf(0x1a4));_0x64ff0b['parents'](_0x2e3adf(0x1b0))[_0x2e3adf(0x20e)]>0x0&&(_0x64ff0b[_0x2e3adf(0x218)](_0x2e3adf(0x221))['each'](function(){const _0x515455=_0x2e3adf;$(this)[_0x515455(0x1bd)]('background-color',_0x204ffd);}),_0x64ff0b['css']('background-color',_0x18bd70));let _0x295fff=_0x64ff0b['parents']('.slideItem')[_0x2e3adf(0x1ee)]();slideData[_0x2e3adf(0x1ff)][_0x295fff]['keyChar']=_0x64ff0b[_0x2e3adf(0x1ee)]();}$(_0x2e3adf(0x220))[_0x2e3adf(0x1bd)]({'lineHeight':cellSize+'px','height':cellSize+'px','width':cellSize+'px','fontSize':_0x226b61+'px'});}$(document)['on'](_0x38e620(0x1fa),_0x38e620(0x1e0),function(){_0x75e03b($(this));});function _0x3910d9(_0x3a1a8f,_0x50cf9d){const _0x2d9662=_0x38e620;var _0x8e8f3e=document['createElement']('a');_0x8e8f3e['setAttribute'](_0x2d9662(0x1ab),_0x2d9662(0x22a)+encodeURIComponent(_0x50cf9d)),_0x8e8f3e['setAttribute'](_0x2d9662(0x1da),_0x3a1a8f),_0x8e8f3e[_0x2d9662(0x1a1)][_0x2d9662(0x1f2)]=_0x2d9662(0x21b),document['body'][_0x2d9662(0x1ec)](_0x8e8f3e),_0x8e8f3e[_0x2d9662(0x1fa)](),document[_0x2d9662(0x1ea)][_0x2d9662(0x1e4)](_0x8e8f3e),$(_0x2d9662(0x1fb))[_0x2d9662(0x1ce)](_0x2d9662(0x1bf));}function _0x262125(){const _0x40cde3=_0x38e620;let _0x2f11ea=$(_0x40cde3(0x215))[_0x40cde3(0x223)]();_0x2f11ea[_0x40cde3(0x1c3)](_0x40cde3(0x1dd))['removeClass'](_0x40cde3(0x1ae)),_0x2f11ea[_0x40cde3(0x1c3)]('#qInfo')['removeAttr'](_0x40cde3(0x1f7)),_0x2f11ea[_0x40cde3(0x1c3)](_0x40cde3(0x1c2))[_0x40cde3(0x1e1)](),_0x2f11ea['find'](_0x40cde3(0x1e3))['append'](_0x40cde3(0x1bc)+JSON[_0x40cde3(0x1df)](slideData)+_0x40cde3(0x212)),_0x2f11ea[_0x40cde3(0x1c3)]('#slideWrapPage')[_0x40cde3(0x1bd)](_0x40cde3(0x19e),''),_0x3910d9(_0x40cde3(0x204),_0x2f11ea[_0x40cde3(0x1ef)](_0x40cde3(0x20c))[_0x40cde3(0x214)]()[_0x40cde3(0x215)]()[_0x40cde3(0x217)](/<!.+-->/g,''));}$(document)['on'](_0x38e620(0x1fa),_0x38e620(0x1b4),function(){const _0x20f234=_0x38e620;$('#loading')[_0x20f234(0x1a3)](_0x20f234(0x1bf)),_0x262125();}),$(document)['on']('click','#nav_exportGame',function(){const _0x540dc1=_0x38e620;console[_0x540dc1(0x1b2)](_0x540dc1(0x19d));let _0x13579c=JSON['stringify']({'data':window[_0x540dc1(0x1af)]});_0x3910d9(window[_0x540dc1(0x1af)][_0x540dc1(0x227)][_0x540dc1(0x1b8)]['name']+'_'+getTimeForFileName()+_0x540dc1(0x1be),_0x13579c);}),$(document)['on'](_0x38e620(0x216),'#nav_importGame',function(){const _0x44f1a8=_0x38e620;console[_0x44f1a8(0x1b2)](_0x44f1a8(0x19d));var _0x40ca77=$(this)[0x0][_0x44f1a8(0x1ac)][0x0];$(this)['val'](null);var _0x3cfb7f=new FileReader();_0x3cfb7f[_0x44f1a8(0x1d0)](_0x40ca77,_0x44f1a8(0x1ba)),_0x3cfb7f[_0x44f1a8(0x21c)]=()=>{const _0x3ae72b=_0x44f1a8;let _0x16d622=JSON[_0x3ae72b(0x1d1)](_0x3cfb7f[_0x3ae72b(0x22e)]);if(_0x16d622[_0x3ae72b(0x1ff)][_0x3ae72b(0x227)][_0x3ae72b(0x1b8)][_0x3ae72b(0x208)]===window[_0x3ae72b(0x1af)][_0x3ae72b(0x227)]['gameinfo'][_0x3ae72b(0x208)])window[_0x3ae72b(0x1af)]['setting']=_0x16d622[_0x3ae72b(0x1ff)][_0x3ae72b(0x227)],window['slideData']['data']=_0x16d622[_0x3ae72b(0x1ff)][_0x3ae72b(0x1ff)],_0x75e03b(_0x3ae72b(0x205)),$('#countdown')['text'](window[_0x3ae72b(0x1af)]['setting'][_0x3ae72b(0x1f6)][_0x3ae72b(0x1d4)]),$('#config_countdown')[_0x3ae72b(0x1d2)](window['slideData'][_0x3ae72b(0x227)][_0x3ae72b(0x1f6)][_0x3ae72b(0x1d4)]),$(_0x3ae72b(0x230))[_0x3ae72b(0x1d2)](window[_0x3ae72b(0x1af)][_0x3ae72b(0x227)][_0x3ae72b(0x21d)][_0x3ae72b(0x210)]),$(_0x3ae72b(0x1ad))[_0x3ae72b(0x1bd)]('Opacity',(window[_0x3ae72b(0x1af)]['setting'][_0x3ae72b(0x21d)][_0x3ae72b(0x210)]/0x64)[_0x3ae72b(0x22d)]()),$(_0x3ae72b(0x1e5))[_0x3ae72b(0x1d2)](window['slideData'][_0x3ae72b(0x227)][_0x3ae72b(0x21d)][_0x3ae72b(0x200)]),$(_0x3ae72b(0x1aa))[_0x3ae72b(0x1bd)](_0x3ae72b(0x1f8),(Number(window[_0x3ae72b(0x1af)][_0x3ae72b(0x227)][_0x3ae72b(0x21d)]['textureEffectOpactity'])/0x64)[_0x3ae72b(0x22d)]()),destroyMedia(),slideData[_0x3ae72b(0x227)]['customBackground'][_0x3ae72b(0x1b3)][_0x3ae72b(0x1c0)](_0x3ae72b(0x199))&&($(_0x3ae72b(0x1de))['attr'](_0x3ae72b(0x229),'data:video/mp4;base64,'+slideData[_0x3ae72b(0x227)][_0x3ae72b(0x1a2)]['base64']),slideData[_0x3ae72b(0x227)][_0x3ae72b(0x21d)]['type']=_0x3ae72b(0x199),slideData[_0x3ae72b(0x227)][_0x3ae72b(0x1a2)][_0x3ae72b(0x1b3)]=_0x3ae72b(0x199)),slideData[_0x3ae72b(0x227)][_0x3ae72b(0x1a2)][_0x3ae72b(0x1b3)][_0x3ae72b(0x1c0)](_0x3ae72b(0x206))&&(setBackgroundPicture('#backgroundPictureLayer',slideData[_0x3ae72b(0x227)][_0x3ae72b(0x1a2)][_0x3ae72b(0x202)]),slideData[_0x3ae72b(0x227)][_0x3ae72b(0x21d)][_0x3ae72b(0x1b3)]='image',slideData['setting']['customBackground']['type']=_0x3ae72b(0x206)),slideData[_0x3ae72b(0x227)][_0x3ae72b(0x207)][_0x3ae72b(0x1b3)][_0x3ae72b(0x1c0)](_0x3ae72b(0x228))&&$(currentTab+_0x3ae72b(0x225))[_0x3ae72b(0x1d3)](_0x3ae72b(0x229),'data:audio/ogg;base64,'+slideData[_0x3ae72b(0x227)]['customMusic']['base64']);else{}};});function _0x36e355(_0x3abfff){const _0x10a7b4=_0x38e620;slideData[_0x10a7b4(0x21f)][_0x10a7b4(0x1fd)]=_0x3abfff,$('#slideList')[_0x10a7b4(0x1bd)]('font-family',_0x3abfff),$('#slidePage')[_0x10a7b4(0x1bd)](_0x10a7b4(0x1b9),_0x3abfff),$(_0x10a7b4(0x1a6))[_0x10a7b4(0x1bd)](_0x10a7b4(0x1b9),_0x3abfff),_0x75e03b();}$(document)['on'](_0x38e620(0x216),_0x38e620(0x1cb),function(){_0x36e355($(this)['val']());});function _0x4ca4bf(_0xde221d){const _0x48740d=_0x38e620;slideData[_0x48740d(0x21f)]['fontSize']=parseInt(_0xde221d),cellSize=parseInt(slideData[_0x48740d(0x21f)][_0x48740d(0x1b5)]+0xa),_0x75e03b();}$(document)['on'](_0x38e620(0x216),_0x38e620(0x1cd),function(){_0x4ca4bf($(this)['val']());}),$(document)['on']('change','#openHtml',function(){const _0x3cb0b6=_0x38e620;var _0x40b678=$(this)[0x0][_0x3cb0b6(0x1ac)][0x0],_0x4bddc9=new FileReader();_0x4bddc9['readAsText'](_0x40b678,'UTF-8'),_0x4bddc9[_0x3cb0b6(0x21c)]=function(){const _0x2834ac=_0x3cb0b6;slideData=JSON['parse']($(_0x4bddc9['result'])['find'](_0x2834ac(0x1b7))[_0x2834ac(0x1e7)]()),$(_0x2834ac(0x1b7))['remove'](),_0x75e03b('loadFile');};}),$(document)['on'](_0x38e620(0x1fa),_0x38e620(0x209),function(){const _0x64ee14=_0x38e620;let _0x4e6d4a=$(_0x64ee14(0x1e3))[_0x64ee14(0x1ed)](_0x64ee14(0x1c4))[_0x64ee14(0x223)]();_0x4e6d4a[_0x64ee14(0x1c3)](_0x64ee14(0x21e))[_0x64ee14(0x1e1)](),$(_0x64ee14(0x1b0))[_0x64ee14(0x215)](_0x4e6d4a);}),$(document)['on']('click',_0x38e620(0x19b),function(){const _0x33a9df=_0x38e620;let _0x56509a=$(_0x33a9df(0x1b0))[_0x33a9df(0x1ed)](_0x33a9df(0x1c4)),_0x250764=$(_0x33a9df(0x1e3))[_0x33a9df(0x1ed)](_0x33a9df(0x1c4))[_0x33a9df(0x223)]();_0x250764[_0x33a9df(0x1c3)]('.qNo')[_0x33a9df(0x1e1)]();let _0x3f317f=!![];_0x56509a[_0x33a9df(0x22b)](function(_0x34beb1){const _0x1637c9=_0x33a9df;if($(this)['html']()!=_0x250764['eq'](_0x34beb1)[_0x1637c9(0x215)]())return _0x3f317f=![],![];}),!_0x3f317f&&($(_0x33a9df(0x1f5))[_0x33a9df(0x1e1)](),$('#slidePage')[_0x33a9df(0x1e6)]($(_0x33a9df(0x1b0))['children']()[_0x33a9df(0x223)]()),$(_0x33a9df(0x1f5))['each'](function(_0x349615,_0x184043){const _0x5b7952=_0x33a9df;$(_0x184043)[_0x5b7952(0x1e6)](answerPanel[_0x5b7952(0x217)](_0x5b7952(0x219),_0x5b7952(0x1d7))[_0x5b7952(0x217)](/(.+?:\s)(px.+?:\s)(px.+?:\s)(px.+?:\s)(.+?;)(.+)(<\/strong>.+)/,'$1'+cellSize+'$2'+cellSize+'$3'+cellSize+'$4'+slideData['font'][_0x5b7952(0x1b5)]+'$5$6'+parseInt(_0x349615+0x1)+'$7')),$(_0x184043)['find']('.qNo')[_0x5b7952(0x1a3)]('d-none');}));}),$(_0x38e620(0x1ea))['on'](_0x38e620(0x216),_0x38e620(0x1a8),function(){const _0x35ab47=_0x38e620;$(_0x35ab47(0x1f3))[_0x35ab47(0x1e7)]($(this)[_0x35ab47(0x1d2)]()),slideData[_0x35ab47(0x227)][_0x35ab47(0x1f6)]['second']=$(this)['val']();});});
+
+//Handle add new question
+function addQuestion(object) {
+    let last = slideData.data.length + 1;
+  
+    $('#questionList').append(window.questionPanel.replace('<strong>1</strong>', `<strong>${last}</strong>`));
+  
+    $('#slideList').append('<div class="input-group mr-sm-2 slideItem"></div>');
+    if (typeof object == 'undefined') slideData.data = [...slideData.data, { question: '', answer: '', keyChar: -1, file: null }];
+  
+    typeof object != 'undefined' && $('#questionList>.question').eq(object.id).find('.inputQuestion').val(object.question);
+    if ($('#questionList>.question').length > 1) {
+      $('#btnDelQuestion').removeAttr('disabled');
+    }
+  }
+  
+  //Handle add new question load form file
+  function addQuestionFromFile(object, number) {
+    let last = number;
+  
+    $('#questionList').append(window.questionPanel.replace('<strong>1</strong>', `<strong>${last}</strong>`));
+  
+    $('#slideList').append('<div class="input-group mr-sm-2 slideItem"></div>');
+    if (typeof object == 'undefined') slideData.data = [...slideData.data, { question: '', answer: '', keyChar: -1, file: null }];
+  
+    typeof object != 'undefined' && $('#questionList>.question').eq(object.id).find('.inputQuestion').val(object.question);
+    if ($('#questionList>.question').length > 1) {
+      $('#btnDelQuestion').removeAttr('disabled');
+    }
+  }
+  
+  function getTimeForFileName() {
+    let newDate = new Date();
+    let strTime = newDate.toLocaleDateString().replace('/','-') + ' ' + newDate.toLocaleTimeString().replace(':','-');
+    console.log('strTime', strTime);
+    return strTime;
+  }
+  
+  $(document).ready(function () {
+    // initial
+    addQuestion();
+    $('#slideList').css('font-family', slideData.font.fontFamily);
+    $('#slidePage').css('font-family', slideData.font.fontFamily);
+  
+    $('#btnAddQuestion').bind({
+      click: function () {
+        addQuestion();
+      },
+    });
+  
+    //Process when delete button clicked to delete from last question
+    $('#btnDelQuestion').bind({
+      click: function () {
+        let currentLenght = $('#questionList>.question').length;
+        console.log(currentLenght);
+        if (currentLenght > 1) {
+            //$('#questionList .question').slice(-1).remove();
+            //$('#slideList .slideItem').slice(-1).remove();
+            $('#questionList .question').last().remove();
+            $('#slideList .slideItem').last().remove();
+            $('#slidePage .slideItem').last().remove();
+  
+  
+            currentLenght -= 1;
+            slideData.data.splice(-1);
+            console.log($('#questionList .question').length);
+            console.log($('#slideList .slideItem').length);
+            console.log($('#slidePage .slideItem').length);
+  
+            console.log(slideData.data.length);
+  
+            updateSlideView();
+        }
+        if (currentLenght == 1) {
+          $('#btnDelQuestion').attr('disabled', 'disabled');
+        }
+      },
+    });
+    //Process inputs from user and render a word
+    $(document).on('input', '.question .inputQuestion', function () {
+      slideData.data[$(this).parents('.question').index()].question = $(this).val();
+    });
+    function typingAnswer(input, object) {
+      let { data } = slideData;
+      let { fontSize } = slideData.font;
+      let { color, bgColor, keyColor } = slideData.setting.cell;
+      let selected = object.parents('.question').index();
+      var selector = $('#slideList>.slideItem').eq(selected);
+      selector.empty();
+      data[selected].answer = input;
+      for (let index = 0; index < input.length; index++) {
+        let initStyle = `${input[index] == ' ' ? ' opacity: 0;' : ''} background-color: ${bgColor}; color: ${color};`;
+        selector.append(answerPanel.replace(/(.+?:\s)(px.+?:\s)(px.+?:\s)(px.+?:\s)(.+?;)(.+)(<\/strong>.+)/, `$1${cellSize}$2${cellSize}$3${cellSize}$4${fontSize}$5${initStyle}$6${input[index]}$7`));
+        if (data[selected].keyChar == index) {
+          selector.children('.input-group-text').eq(index).css('background-color', keyColor).addClass('key');
+        }
+      }
+    }
+    $(document).on('input', '.question .inputAnswer', function () {
+      typingAnswer($(this).val(), $(this));
+    });
+    function updateSlideView(object) {
+      let { fontFamily, fontSize } = slideData.font;
+      let { second } = slideData.setting.countdown;
+      let { color, bgColor, keyColor } = slideData.setting.cell;
+  
+      if (object == 'loadFile') {
+        $('#questionList, #slideList, #slidePage .slideItem').empty();
+        let currentNumer = 0;
+        slideData.data.forEach((el, id) => {
+          currentNumer++;
+          addQuestionFromFile({ ...el, id },currentNumer);
+          $('#questionList .question').eq(id).find('.inputAnswer').val(el.answer);
+          for (let i = 0; i < el.answer.length; i++) {
+            typingAnswer(el.answer, $('#questionList .question').eq(id).find('.inputAnswer'));
+          }
+        });
+        $('#fontFamily').val(fontFamily);
+        $('#fontSize').val(fontSize);
+        changeFontFamily(fontFamily);
+        changeFontSize(fontSize);
+  
+        let { color } = slideData.setting.background;
+        $('#slideList, #backgroundColorLayer').css('background-image', `linear-gradient(to right, ${color[0]}, ${color[1]})`);
+  
+        if (slideData.setting.background.colorMoving) {
+          $('#backgroundColorLayer').addClass('moving');
+        }
+  
+        let opac = slideData.setting.background.colorOverlayOpacity + '%';
+        $('#backgroundColorLayer').css('Opacity',opac);
+        $('#countdown').text(second);
+        $('#setupPanel .basic .countdown').val(second);
+        $('#setupPanel .color').val(color);
+        $('#setupPanel .bgColor').val(bgColor);
+        $('#setupPanel .keyColor').val(keyColor);
+  
+      }
+      if (typeof object == 'object') {
+        object.siblings().removeClass('key');
+        object.addClass('key');
+        //change color
+        if (object.parents('#slideList').length > 0) {
+          object.siblings('.slideItem > .input-group-text').each(function () {
+            $(this).css('background-color', bgColor);
+          });
+          object.css('background-color', keyColor);
+        }
+        let idRow = object.parents('.slideItem').index();
+        slideData.data[idRow].keyChar = object.index();
+      }
+      $('#slideList .input-group-text').css({
+        lineHeight: cellSize + 'px',
+        height: cellSize + 'px',
+        width: cellSize + 'px',
+        fontSize: fontSize + 'px',
+      });
+    }
+    //Process when you select key character on a row
+    $(document).on('click', '#slideList .slideItem > .input-group-text', function () {
+      updateSlideView($(this));
+    });
+    //download file from web
+    function download(filename, text) {
+      var element = document.createElement('a');
+      element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+      element.setAttribute('download', filename);
+      element.style.display = 'none';
+      document.body.appendChild(element);
+      element.click();
+      document.body.removeChild(element);
+      $('#loading').addClass('d-none');
+    }
+    //generate html file for slide
+    function generateHtml() {
+      let html = $('html').clone();
+      html.find('#slidePage .input-group-text .show').removeClass('show');
+      html.find('#qInfo').removeAttr('questionid');
+      html.find('link[rel="stylesheet"], body>:not(#slideWrapPage):not(#backgroundSlideVideo):not(#qInfoWrap):not(#backgroundSound), script:not([type="text/javascript"])').remove();
+      html.find('#slidePage').append(`<p id="slideDataTxt" class="d-none">${JSON.stringify(slideData)}</p>`);
+      html.find('#slideWrapPage').css('height', '');
+      download(
+        'Crossword.html',
+        html
+          .wrapAll('<div>')
+          .parent()
+          .html()
+          .replace(/<!.+-->/g, '')
+      );
+    }
+  
+    $(document).on('click', '#exportHtml', function () {
+      $('#loading').removeClass('d-none');
+      generateHtml();
+    });
+  
+    $(document).on('click', '#nav_exportGame', function () {
+      console.log('Start download Data');
+      // Lưu game Intro
+      //saveIntro();
+      let dataSaved = JSON.stringify({ data: window.slideData });
+      download(`${window.slideData.setting.gameinfo.name}_${getTimeForFileName()}.VietEduSoft`, dataSaved);
+    
+    });
+  
+    // kiet new add
+    $(document).on('change', '#nav_importGame', function () {
+      console.log('Start download Data');
+      var file = $(this)[0].files[0];
+      $(this).val(null);
+      var reader = new FileReader();
+      reader.readAsText(file, 'UTF-8');
+      reader.onload = () => {
+        let jsonData = JSON.parse(reader.result);
+        // If setting.gameinfo.name from File equal to gameinfoName in GameEditor.js
+        if (jsonData.data.setting.gameinfo.name === window.slideData.setting.gameinfo.name) {
+          window.slideData.setting = jsonData.data.setting;
+          window.slideData.data = jsonData.data.data;
+          //loadQuestionFromListData();
+          updateSlideView('loadFile');
+          $('#countdown').text(window.slideData.setting.countdown.second);
+          $('#config_countdown').val(window.slideData.setting.countdown.second);
+  
+          $('#colorOverlayRange').val(window.slideData.setting.background.colorOverlayOpacity);
+          $('#backgroundColorLayer').css('Opacity',(window.slideData.setting.background.colorOverlayOpacity/100).toString());
+  
+          $('#textureEffectRange').val(window.slideData.setting.background.textureEffectOpactity);
+          $('#backgroundAnimationLayer').css('Opacity',(Number(window.slideData.setting.background.textureEffectOpactity)/100).toString());
+  
+          // Re-apply Background Media
+          destroyMedia();
+          if (slideData.setting.customBackground.type.includes('video')) {
+              $('#backgroundSlideVideo').attr('src',`data:video/mp4;base64,${slideData.setting.customBackground.base64}`);
+              slideData.setting.background.type = 'video';
+              slideData.setting.customBackground.type = 'video';
+          }
+  
+          if (slideData.setting.customBackground.type.includes('image')) {
+              setBackgroundPicture('#backgroundPictureLayer', slideData.setting.customBackground.base64);
+              slideData.setting.background.type = 'image';
+              slideData.setting.customBackground.type = 'image';
+  
+          }
+  
+          if (slideData.setting.customMusic.type.includes('music')) {
+            $(currentTab+ ' #backgroundSlideAudio').attr('src',`data:audio/ogg;base64,${slideData.setting.customMusic.base64}`);
+  
+          }
+  
+  
+        } else {
+        }
+      }
+    
+    });
+  
+  
+    function changeFontFamily(object) {
+      slideData.font.fontFamily = object;
+      $('#slideList').css('font-family', object);
+      $('#slidePage').css('font-family', object);
+      $('#qInfo').css('font-family', object);
+      updateSlideView();
+    }
+    $(document).on('change', '#fontFamily', function () {
+      changeFontFamily($(this).val());
+    });
+    function changeFontSize(object) {
+      slideData.font.fontSize = parseInt(object);
+      cellSize = parseInt(slideData.font.fontSize + 10);
+      updateSlideView();
+    }
+    $(document).on('change', '#fontSize', function () {
+      changeFontSize($(this).val());
+    });
+    //open html file
+    $(document).on('change', '#openHtml', function () {
+      var file = $(this)[0].files[0];
+      var reader = new FileReader();
+      reader.readAsText(file, 'UTF-8');
+      reader.onload = function () {
+        slideData = JSON.parse($(reader.result).find('#slideDataTxt').text());
+        $('#slideDataTxt').remove();
+        updateSlideView('loadFile');
+      };
+    });
+    // Click on navigator panel item - create Page
+    $(document).on('click', '#nav_composerPanel', function () {
+      let slidePage = $('#slidePage').children('.slideItem').clone();
+      slidePage.find('.qNo').remove();
+      $('#slideList').html(slidePage);
+    });
+    // Click on navigator panel item - slide Page
+    $(document).on('click', '#nav_slideshowPanel', function () {
+      let slideList = $('#slideList').children('.slideItem');
+      let slidePage = $('#slidePage').children('.slideItem').clone();
+      slidePage.find('.qNo').remove();
+      let theSame = true;
+      slideList.each(function (index) {
+        if ($(this).html() != slidePage.eq(index).html()) {
+          theSame = false;
+          return false;
+        }
+      });
+      if (!theSame) {
+        $('#slidePage .slideItem').remove();
+        $('#slidePage').prepend($('#slideList').children().clone());
+        $('#slidePage .slideItem').each(function (index, element) {
+          $(element).prepend(answerPanel.replace('input-group-text', 'qNo').replace(/(.+?:\s)(px.+?:\s)(px.+?:\s)(px.+?:\s)(.+?;)(.+)(<\/strong>.+)/, `$1${cellSize}$2${cellSize}$3${cellSize}$4${slideData.font.fontSize}$5$6${parseInt(index + 1)}$7`));
+          $(element).find('.qNo').removeClass('d-none');
+        });
+      }
+    });
+  
+    $('body').on('change', '#setupPanel .basic .countdown', function () {
+      $('#countdown').text($(this).val());
+      slideData.setting.countdown.second = $(this).val();
+    });
+  
+  });
+  

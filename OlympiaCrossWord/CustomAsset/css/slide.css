@@ -5,7 +5,7 @@ body {
   overflow: hidden;
 }
 #slidePage {
-  padding-left: 200px;
+  padding-left: 310px;
   overflow-y: auto;
   height: 95vh;
   width: 100vw;
@@ -203,6 +203,8 @@ body {
   border-radius: inherit;
   padding: 1% 10% 1% 1%;
   pointer-events: none;
+  font-weight: bold;
+
 }
 
 .fullheight{
@@ -246,4 +248,53 @@ body {
 
 #questionMediaPanel {
   text-align: center;
+}
+
+#TextQuestion_Wrapper {
+  position: absolute;
+  z-index: 100;
+  width: 300px;
+  top: 30px;
+  height: 85%;
+  transition: width 2s;
+  border: 1px solid black;
+  border-radius: 10px;
+  background: #3e3e3ee0;
+  color: white;
+}
+
+#TextQuestion_ShowSpan {
+  padding: 20px 10px 5px 10px;
+  pointer-events: none;
+  font-weight: bold;
+}
+
+.TextQuestion_Close {
+  position: absolute;
+  left: 275px;
+  padding: 0px 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.TextQuestion_Close:hover {
+  background: black;
+}
+
+.TextQuestion_answerJudge {
+  position: absolute;
+  top: 88%;
+}
+
+.TextQuestion_button {
+    padding: 0px 25px;
+    border: 1px solid;
+    font-size: xxx-large;
+    margin-left: 30px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.TextQuestion_button:hover {
+  background: black;
 }

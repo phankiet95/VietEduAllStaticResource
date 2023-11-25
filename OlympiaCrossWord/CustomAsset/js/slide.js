@@ -1,1 +1,169 @@
-function _0x66d1(_0x58722c,_0x1fcefd){var _0x387f4b=_0x387f();return _0x66d1=function(_0x66d1b8,_0x2f281c){_0x66d1b8=_0x66d1b8-0x17c;var _0x326903=_0x387f4b[_0x66d1b8];return _0x326903;},_0x66d1(_0x58722c,_0x1fcefd);}var _0x54a002=_0x66d1;function _0x387f(){var _0x174ef2=['3abuIrP','click','#countdown','85268FssPKI','css','slide','#countdownWrap','disable','rejected','346032DHbAQK','parents','#questionMedia_video','#answerJudge\x20.tick','file','getElementById','data','19675aQSczZ','#questionText','second','audio','ready',':not(.qNo)','each','#questionMedia_img','#qInfo','2266313PeZhXq','#slideDataTxt','data:video/mp4;base64,','index','380YtJRVc',':visible','text','#questionMedia_audio','setting','showTop3','d-none','src','#questionOpenPanelWrapper','data:audio/mpeg;base64,','left','play','pause','questionid','slideData','audio_correct','font-family','audio_timeup','#questionClose','8qENONi','timerCountdown','hide','178600EukUQl','clearInterval','#slidePage\x20.input-group-text:not(.rejected)','#slidePage\x20.slideItem','video','attr','show','6749540cBaVwx','image','#horizontalNavigation','623385xbSFgh','base64','toggle','audio_tiktok','audio_select','currentTime','fontFamily','#answerJudge','addClass','.slideItem','parse','countdown','removeClass','question','children'];_0x387f=function(){return _0x174ef2;};return _0x387f();}(function(_0x35a546,_0x5fefde){var _0xe469fb=_0x66d1,_0x345fd5=_0x35a546();while(!![]){try{var _0x153210=parseInt(_0xe469fb(0x1c2))/0x1+-parseInt(_0xe469fb(0x192))/0x2*(-parseInt(_0xe469fb(0x18f))/0x3)+-parseInt(_0xe469fb(0x1ac))/0x4*(-parseInt(_0xe469fb(0x19f))/0x5)+parseInt(_0xe469fb(0x198))/0x6+parseInt(_0xe469fb(0x1a8))/0x7*(parseInt(_0xe469fb(0x1bf))/0x8)+-parseInt(_0xe469fb(0x180))/0x9+-parseInt(_0xe469fb(0x17d))/0xa;if(_0x153210===_0x5fefde)break;else _0x345fd5['push'](_0x345fd5['shift']());}catch(_0x23d08f){_0x345fd5['push'](_0x345fd5['shift']());}}}(_0x387f,0x38b4f),$(document)[_0x54a002(0x1a3)](function(){var _0x28997b=_0x54a002;$(_0x28997b(0x1b4))[_0x28997b(0x1c1)](),typeof slideData=='undefined'&&(window[_0x28997b(0x1ba)]=JSON[_0x28997b(0x18a)]($(_0x28997b(0x1a9))['text']())),$(_0x28997b(0x1a7))[_0x28997b(0x193)](_0x28997b(0x1bc),slideData['font'][_0x28997b(0x186)]),$(_0x28997b(0x191))[_0x28997b(0x1ae)](slideData[_0x28997b(0x1b0)][_0x28997b(0x18b)]['second']),$(document)['on'](_0x28997b(0x190),_0x28997b(0x1c4),function(){var _0x24eae9=_0x28997b;$(this)[_0x24eae9(0x18e)]()['toggleClass'](_0x24eae9(0x17c));});function _0x3ca234(_0x279eca,_0x124428){var _0x4a45b3=_0x28997b;switch(_0x279eca){case _0x4a45b3(0x1c6):$(_0x4a45b3(0x19a))['attr'](_0x4a45b3(0x1b3),_0x4a45b3(0x1aa)+_0x124428),$('#questionMedia_video')[_0x4a45b3(0x18c)](_0x4a45b3(0x1b2));break;case _0x4a45b3(0x1a2):$(_0x4a45b3(0x1af))['attr']('src',_0x4a45b3(0x1b5)+_0x124428),$('#questionMedia_audio')[_0x4a45b3(0x18c)](_0x4a45b3(0x1b2));break;case _0x4a45b3(0x17e):$('#questionMedia_img')[_0x4a45b3(0x1c7)](_0x4a45b3(0x1b3),'data:image/gif;base64,'+_0x124428),$(_0x4a45b3(0x1a6))[_0x4a45b3(0x18c)]('d-none'),_0x279eca='img';break;default:break;}}var _0x2c4b4f=$(_0x28997b(0x17f))['is'](_0x28997b(0x1ad));$(document)['on']('click','#slidePage\x20.qNo',function(){var _0x410415=_0x28997b;_0x2c4b4f&&$(_0x410415(0x17f))['hide'](),typeof $(_0x410415(0x187))[_0x410415(0x1c7)](_0x410415(0x1b9))=='undefined'&&document['getElementById'](_0x410415(0x184))[_0x410415(0x1b7)](),typeof $('#answerJudge')[_0x410415(0x1c7)]('questionid')!='undefined'&&$(this)[_0x410415(0x199)](_0x410415(0x189))[_0x410415(0x1ab)]()!=$(_0x410415(0x1a0))[_0x410415(0x1c7)](_0x410415(0x1b9))&&document['getElementById'](_0x410415(0x184))['play'](),jQuery(_0x410415(0x1b4))[_0x410415(0x182)](_0x410415(0x194),{'direction':_0x410415(0x1b6)},0x1f4),setTimeout(()=>{var _0x12ac83=_0x410415;$('#TextShowSpan')[_0x12ac83(0x188)](_0x12ac83(0x1b1));let _0x3894b6=slideData[_0x12ac83(0x19e)][$(this)['parents'](_0x12ac83(0x189))[_0x12ac83(0x1ab)]()];_0x3894b6[_0x12ac83(0x19c)]&&(_0x3ca234(_0x3894b6['file']['type'],_0x3894b6[_0x12ac83(0x19c)][_0x12ac83(0x181)]),$('#TextShowSpan')[_0x12ac83(0x18c)](_0x12ac83(0x1b1))),$(_0x12ac83(0x1a0))['html'](_0x3894b6[_0x12ac83(0x18d)]),$(_0x12ac83(0x187))['attr']('questionid',$(this)['parents'](_0x12ac83(0x189))[_0x12ac83(0x1ab)]());},0x1f4);});function _0x392f8d(_0x596e2b){var _0x20dbd8=_0x28997b;jQuery('#questionOpenPanelWrapper')[_0x20dbd8(0x182)]('slide',{'direction':_0x20dbd8(0x1b6)},0x1f4),$(_0x20dbd8(0x19a))[_0x20dbd8(0x1c7)](_0x20dbd8(0x1b3),''),$(_0x20dbd8(0x19a))[_0x20dbd8(0x188)](_0x20dbd8(0x1b2)),$(_0x20dbd8(0x1af))[_0x20dbd8(0x1c7)](_0x20dbd8(0x1b3),''),$(_0x20dbd8(0x1af))[_0x20dbd8(0x188)](_0x20dbd8(0x1b2)),$(_0x20dbd8(0x1a6))[_0x20dbd8(0x1c7)](_0x20dbd8(0x1b3),''),$('#questionMedia_img')['addClass'](_0x20dbd8(0x1b2)),window[_0x20dbd8(0x1c0)]!=undefined&&window[_0x20dbd8(0x1c0)]!='undefined'&&(window[_0x20dbd8(0x1c3)](timerCountdown),$(_0x20dbd8(0x195))[_0x20dbd8(0x18c)](_0x20dbd8(0x196)),document[_0x20dbd8(0x19d)](_0x20dbd8(0x183))[_0x20dbd8(0x1b8)](),document['getElementById'](_0x20dbd8(0x183))[_0x20dbd8(0x185)]=0x0,document[_0x20dbd8(0x19d)]('audio_timeup')[_0x20dbd8(0x1b8)](),document[_0x20dbd8(0x19d)](_0x20dbd8(0x1bd))[_0x20dbd8(0x185)]=0x0),$(_0x20dbd8(0x191))[_0x20dbd8(0x1ae)](slideData[_0x20dbd8(0x1b0)][_0x20dbd8(0x18b)][_0x20dbd8(0x1a1)]),$('#backgroundSound')[_0x20dbd8(0x18e)]()[_0x20dbd8(0x1a5)](function(_0x10cfe6,_0x7f30f2){var _0x13e139=_0x20dbd8;_0x7f30f2[_0x13e139(0x1b8)](),_0x7f30f2[_0x13e139(0x185)]=0x0;}),_0x2c4b4f&&$('#horizontalNavigation')[_0x20dbd8(0x17c)]();}$(document)['on']('click',_0x28997b(0x19b),function(){var _0x48a4a2=_0x28997b;_0x392f8d(),$('#slidePage\x20.slideItem')['eq']($(_0x48a4a2(0x187))[_0x48a4a2(0x1c7)](_0x48a4a2(0x1b9)))['children'](_0x48a4a2(0x1a4))['children']()[_0x48a4a2(0x188)](_0x48a4a2(0x17c)),document[_0x48a4a2(0x19d)](_0x48a4a2(0x1bb))[_0x48a4a2(0x1b7)]();}),$(document)['on'](_0x28997b(0x190),'#answerJudge\x20.reject',function(){var _0x5efa95=_0x28997b;_0x392f8d(),$(_0x5efa95(0x1c5))['eq']($(_0x5efa95(0x187))[_0x5efa95(0x1c7)](_0x5efa95(0x1b9)))[_0x5efa95(0x18e)](_0x5efa95(0x1a4))[_0x5efa95(0x188)](_0x5efa95(0x197)),document['getElementById']('audio_incorrect')[_0x5efa95(0x1b7)]();}),$(document)['on'](_0x28997b(0x190),_0x28997b(0x1be),function(){_0x392f8d();});}));
+$(document).ready(function () {
+    $('#questionOpenPanelWrapper').hide();
+    /* get data from html file and put it in to slideData variable */
+    typeof slideData == 'undefined' && (window.slideData = JSON.parse($('#slideDataTxt').text()));
+    $('#qInfo').css('font-family', slideData.font.fontFamily);
+    $('.countdown').text(slideData.setting.countdown.second);
+  
+    /* display a character on click */
+    $(document).on('click', '#slidePage .input-group-text:not(.rejected)', function () {
+      $(this).children().toggleClass('show');
+    });
+  
+    function previewMedia(type, src) {
+      switch (type) {
+        case 'video':
+          $('#questionMedia_video').attr('src', 'data:video/mp4;base64,' + src);
+          $('#questionMedia_video').removeClass('d-none');
+          break;
+        case 'audio':
+          $('#questionMedia_audio').attr('src', 'data:audio/mpeg;base64,' + src);
+          $('#questionMedia_audio').removeClass('d-none');
+          break;
+        case 'image':
+          $('#questionMedia_img').attr('src', 'data:image/gif;base64,' + src);
+          $('#questionMedia_img').removeClass('d-none');
+          type = 'img';
+          break;
+        default:
+          break;
+      }
+    }
+    var isNavigationBarShowed = $('#horizontalNavigation').is(":visible");
+  
+    /* handle on click on question's number */
+    $(document).on('click', '#slidePage .qNo', function () {
+  
+      typeof $('#answerJudge').attr('questionid') == 'undefined' && document.getElementById('audio_select').play();
+      if (typeof $('#answerJudge').attr('questionid') != 'undefined' && $(this).parents('.slideItem').index() != $('#questionText').attr('questionid')) {
+  
+        document.getElementById('audio_select').play();
+      }
+  
+      let data = slideData.data[$(this).parents('.slideItem').index()];
+  
+      // If Question is Text 
+      if (data.file == '' || data.file == null) {
+        $('.questionText').html(data.question);
+        $('#TextQuestion_Wrapper').show();
+        return;
+      }
+  
+      if (isNavigationBarShowed) {
+        $('#horizontalNavigation').hide();
+      }
+  
+  
+      jQuery('#questionOpenPanelWrapper').toggle('slide', {direction: 'left'}, 500);
+  
+      // Load media
+      // Reduce lag time when loading media
+      setTimeout(() => {
+        $('#TextShowSpan').addClass('showTop3');
+      if (data.file) {
+        previewMedia(data.file.type, data.file.base64);
+        // If Question has media, then text span will be shown at the bottom
+        $('#TextShowSpan').removeClass('showTop3');
+      }
+  
+      $('.questionText').html(data.question);
+      $('#answerJudge').attr('questionid', $(this).parents('.slideItem').index());
+  
+      }, 500);
+  
+    });
+  
+    // Close TextQuestion 
+    $(document).on('click', '#TextQuestion_Close', function () {
+      closeTextQuestion();
+    });
+  
+    function closeTextQuestion() {
+      $('#TextQuestion_Wrapper').hide();
+      if (window.timerCountdown != undefined && window.timerCountdown != 'undefined') {
+        window.clearInterval(timerCountdown);
+        $('#countdownWrap').removeClass('disable');
+        document.getElementById('audio_tiktok').pause();
+        document.getElementById('audio_tiktok').currentTime = 0;
+        document.getElementById('audio_timeup').pause();
+        document.getElementById('audio_timeup').currentTime = 0;
+      }
+      $('.countdown').text(slideData.setting.countdown.second);
+      $('#backgroundSound')
+        .children()
+        .each(function (index, el) {
+          el.pause();
+          el.currentTime = 0;
+        });
+    }
+  
+    /* Text Question handle on click choose correct or incorrect answer */
+  
+    $(document).on('click', '.TextQuestion_Right', function () {
+      closeTextQuestion();
+      $('#slidePage .slideItem').eq($('#answerJudge').attr('questionid')).children(':not(.qNo)').children().addClass('show');
+      document.getElementById('audio_correct').play();
+    });
+  
+    $(document).on('click', '.TextQuestion_Wrong', function () {
+      closeTextQuestion();
+      $('#slidePage .slideItem').eq($('#answerJudge').attr('questionid')).children(':not(.qNo)').addClass('rejected');
+      document.getElementById('audio_incorrect').play();
+    });
+  
+  
+    function closeQuestionWrap(option) {
+      jQuery('#questionOpenPanelWrapper').toggle('slide', {direction: 'left'}, 500);
+  
+      // destroy all media
+      $('#questionMedia_video').attr('src', '');
+      $('#questionMedia_video').addClass('d-none');
+      $('#questionMedia_audio').attr('src', '');
+      $('#questionMedia_audio').addClass('d-none');
+      $('#questionMedia_img').attr('src', '');
+      $('#questionMedia_img').addClass('d-none');
+  
+      if (window.timerCountdown != undefined && window.timerCountdown != 'undefined') {
+        window.clearInterval(timerCountdown);
+        $('#countdownWrap').removeClass('disable');
+        document.getElementById('audio_tiktok').pause();
+        document.getElementById('audio_tiktok').currentTime = 0;
+        document.getElementById('audio_timeup').pause();
+        document.getElementById('audio_timeup').currentTime = 0;
+      }
+      $('.countdown').text(slideData.setting.countdown.second);
+      $('#backgroundSound')
+        .children()
+        .each(function (index, el) {
+          el.pause();
+          el.currentTime = 0;
+        });
+  
+      if (isNavigationBarShowed) {
+        $('#horizontalNavigation').show();
+      }
+    }
+  
+  
+  
+    /* handle on click choose correct or incorrect answer */
+  
+    $(document).on('click', '#answerJudge .tick', function () {
+      closeQuestionWrap();
+      $('#slidePage .slideItem').eq($('#answerJudge').attr('questionid')).children(':not(.qNo)').children().addClass('show');
+      document.getElementById('audio_correct').play();
+    });
+    
+    $(document).on('click', '#answerJudge .reject', function () {
+      closeQuestionWrap();
+      $('#slidePage .slideItem').eq($('#answerJudge').attr('questionid')).children(':not(.qNo)').addClass('rejected');
+      document.getElementById('audio_incorrect').play();
+    });
+  
+    /* handle on click choose correct or incorrect answer */
+    $(document).on('click', '#questionClose', function () {
+      closeQuestionWrap();
+    });
+    
+  });
+  
