@@ -162,13 +162,17 @@ function addQuestion(object) {
     });
     //download file from web
     function download(filename, text) {
+      console.log('filedownload 1');
       var element = document.createElement('a');
       element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
       element.setAttribute('download', filename);
       element.style.display = 'none';
       document.body.appendChild(element);
+      console.log('filedownload 2');
       element.click();
+      console.log('filedownload 3');
       document.body.removeChild(element);
+      console.log('filedownload 4');
       //$('#loading').addClass('d-none');
     }
     //generate html file for slide
