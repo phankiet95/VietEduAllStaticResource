@@ -167,13 +167,14 @@ function addQuestion(object) {
       element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
       element.setAttribute('download', filename);
       element.style.display = 'none';
-      document.body.appendChild(element);
+      $('#fordownload').append(element);
+      //document.body.appendChild(element);
       console.log('filedownload 2');
       element.click();
       console.log('filedownload 3');
-      document.body.removeChild(element);
+      $('#fordownload').empty(element);
+      //document.body.removeChild(element);
       console.log('filedownload 4');
-      //$('#loading').addClass('d-none');
     }
     //generate html file for slide
     function generateHtml() {
