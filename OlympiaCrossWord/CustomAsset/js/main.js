@@ -169,7 +169,7 @@ function addQuestion(object) {
       document.body.appendChild(element);
       element.click();
       document.body.removeChild(element);
-      $('#loading').addClass('d-none');
+      //$('#loading').addClass('d-none');
     }
     //generate html file for slide
     function generateHtml() {
