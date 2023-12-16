@@ -83,7 +83,7 @@ $(document).ready(function () {
     $('#TextQuestion_Wrapper').hide();
     if (window.timerCountdown != undefined && window.timerCountdown != 'undefined') {
       window.clearInterval(timerCountdown);
-      $('#countdownWrap').removeClass('disable');
+      $('#countdown').removeClass('disable');
       document.getElementById('audio_tiktok').pause();
       document.getElementById('audio_tiktok').currentTime = 0;
       document.getElementById('audio_timeup').pause();
@@ -124,9 +124,9 @@ $(document).ready(function () {
     $('#questionMedia_img').attr('src', '');
     $('#questionMedia_img').addClass('d-none');
 
-    if (window.timerCountdown != undefined && window.timerCountdown != 'undefined') {
-      window.clearInterval(timerCountdown);
-      $('#countdownWrap').removeClass('disable');
+    if (window.timerCountdown2 != undefined && window.timerCountdown2 != 'undefined') {
+      window.clearInterval(timerCountdown2);
+      $('#countdown_media').removeClass('disable');
       document.getElementById('audio_tiktok').pause();
       document.getElementById('audio_tiktok').currentTime = 0;
       document.getElementById('audio_timeup').pause();

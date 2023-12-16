@@ -98,6 +98,12 @@ body {
   cursor: pointer;
   font-size: 5vh;
 }
+
+#countdown_media {
+  cursor: pointer;
+  font-size: 8vh;
+  color: black;
+}
 .tick {
   background: #48c78e;
   width: 120px;
