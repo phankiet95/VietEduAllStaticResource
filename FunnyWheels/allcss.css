@@ -398,8 +398,7 @@
     color: #31708f;
     background-color: #d9edf7;
     border-color: #bce8f1;
-    font-weight: border;
-    font-size: 54px;
+    font-size: 38px;
     padding-left: 10px;
   }
   
@@ -407,7 +406,7 @@
     padding: 25px;
     font-weight: border;
     font-size: larger;
-    font-size: 64px;
+    font-size: 38px;
   }
   
   .panel {
@@ -732,8 +731,7 @@
 }
 
 .chartholder {
-    font-size: 32px;
-    font-weight: bolder;
+    font-size: 22px;
 }
 
 #score-text {
