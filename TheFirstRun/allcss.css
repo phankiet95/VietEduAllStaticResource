@@ -588,7 +588,7 @@ top: 80px;
 }
 
 .questionDisplay {
-  height: 34%;
+  height: auto;
   width: 75%;
   top: 100vh;
   left: 8vh;
@@ -638,9 +638,9 @@ top: 80px;
 }
 
 .questionMedia {
-  height: 60vh;
-  width: 100vh;
-  top: -70%;
+  height: 95vh;
+  width: 75vw;
+  top: -95%;
   left: 8vh;
   position: absolute;
   z-index: 1;
@@ -733,10 +733,13 @@ font-size: 70px;
 
 
 .questionMedia_img {
-  width:100%;
-  height: 100%;
-  border-radius: 20px;
-  background-size:100% 100%;
+    /* width:100%; */
+    height: 100%;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    /* background-size:100% 100%; */
 }
 
 .questionMedia_video {

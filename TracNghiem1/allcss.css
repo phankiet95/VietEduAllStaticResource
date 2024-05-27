@@ -707,8 +707,8 @@ cursor: pointer;
 
 .questionMedia {
   height: 60vh;
-  width: 100vh;
-  top: -70%;
+  width: 75vw;
+  top: -95%;
   left: 7vh;
   position: absolute;
   z-index: 1;
@@ -811,10 +811,11 @@ font-size: 70px;
 
 
 .questionMedia_img {
-  width:100%;
-  height: 100%;
-  border-radius: 20px;
-  background-size:100% 100%;
+height: 100%;
+border-radius: 20px;
+background-repeat: no-repeat;
+background-size: contain;
+background-position: center;
 }
 
 .questionMedia_video {
