@@ -35,12 +35,14 @@ function addQuestion(object) {
     console.log('strTime', strTime);
     return strTime;
   }
-  
+
+  $(document).ready(function () {
     // initial
     addQuestion();
     $('#slideList').css('font-family', slideData.font.fontFamily);
     $('#slidePage').css('font-family', slideData.font.fontFamily);
-  
+ 
+  });
     $('#btnAddQuestion').bind({
       click: function () {
         addQuestion();
