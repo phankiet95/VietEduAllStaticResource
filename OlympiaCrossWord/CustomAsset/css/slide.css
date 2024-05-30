@@ -254,6 +254,7 @@ body {
 
 #questionMediaPanel {
   text-align: center;
+  height: 100%;
 }
 
 #TextQuestion_Wrapper {

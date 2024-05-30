@@ -66,6 +66,7 @@
   <script src="CustomAsset/js/slide.js"></script>
   <script src="CustomAsset/js/main.js"></script>
   <script src="CustomAsset/js/countdown.js"></script>
+  <script src="CustomAsset/js/OpenGameSampleHelper.js"></script>
 
 </head>
 
@@ -127,9 +128,11 @@
           <i class="fa-solid fa-equals hvr-bounce-in" id="questionClose"></i>
           <!-- Media in question-->
           <div id="questionMediaPanel">
-            <div id=""><img id ="questionMedia_img" class="d-none hvr-bob" style="max-width:80%; border-radius: 20px;"></div>
-            <audio id="questionMedia_audio" class="d-none" controls="" autoplay style="width:50%" ></audio>
-            <div><video id="questionMedia_video" class="d-none" controls="none" style="max-width:80%; border-radius: 20px; pointer-events: auto;"></video></div>
+            <div style="height: 97%; ">
+              <img id ="questionMedia_img" class="d-none hvr-bob" style="max-width:100%; border-radius: 20px; height: 90%;">
+              <audio id="questionMedia_audio" class="d-none" controls="" autoplay style="width:50%" ></audio>
+              <video id="questionMedia_video" class="d-none" controls="none" style="max-width:80%; border-radius: 20px; pointer-events: auto; height: 80%;"></video>
+            </div>
           </div>
           <div id="TextShowSpan"><span class="questionText" id="questionText" style="font-size:2.5rem">This is sample question</span></div>
           <div id="qActionPanel">

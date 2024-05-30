@@ -36,7 +36,6 @@ function addQuestion(object) {
     return strTime;
   }
   
-  $(document).ready(function () {
     // initial
     addQuestion();
     $('#slideList').css('font-family', slideData.font.fontFamily);
@@ -322,5 +321,4 @@ function addQuestion(object) {
       slideData.setting.countdown.second = $(this).val();
     });
   
-  });
   
