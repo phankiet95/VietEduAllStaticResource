@@ -22,6 +22,8 @@ const ERROR_MAX_SIZE_ALLOW = 'File quá nặng, xin hãy chọn file dưới 30M
 // notice
 const ERROR_WRONG_GAME = 'File vừa nhập không hợp lệ';
 const SUCCESS_IMPORT_GAME = 'Nhập file thành công';
+const SUCCESS_OPEN_SAMPLE_GAME = 'Đã mở ví dụ thành công';
+const FAILED_OPEN_SAMPLE_GAME = 'Không tìm thấy ví dụ. Hãy kiểm tra lại đường dẫn.';
 
 // Font Family
 window.fontList = [
@@ -565,17 +567,17 @@ class KeyPairList {
 }
 
 var isFirstClicked = false;
-
+let keyPairList = new KeyPairList();
+let setup = new Setup();
 /* MAIN */
 $(document).ready(function () {
-    let keyPairList = new KeyPairList();
-    let setup = new Setup();
+
     setup.initial();
     keyPairList.add(8);
 
     // Set default font color
     $('.slideList .boxcard').css('color', '#262626');
-
+});
     // Play background music
     $(document).on('click', function () {
         // Auto start game
@@ -709,7 +711,7 @@ $(document).ready(function () {
         }
 
     });
-});
+
 
 
 window.questionPanel = `<div class="question"><div class="mt-2"><div class="input-group mr-sm-2"><div class="input-group-prepend"><div class="input-group-text"><strong>1</strong></div></div><input type="text" class="form-control inputQuestion" placeholder="Từ khóa"><div class="input-group-append"><label class="uploadBtn input-group-text d-block"><input class="uploadFile" type="file" accept="image/*"><img src="http://vietedusoft.weebly.com/uploads/2/6/2/2/26226810/plus_orig.png" title="Chọn hình ảnh"></label></div></div></div></div>`;
@@ -721,3 +723,44 @@ window.setting = {
     gameinfo: { name: 'MemoryGame' },
     gameIntro: { gameIntro_title: '', gameIntro_detail: '' },
 };
+
+// OpenGameSampleHelper.js
+
+function readGameData(sampleName) {
+    $.getJSON('gameFileData/' + sampleName, function(jsonData) {
+        if (jsonData) {
+            window.setting = jsonData.setting;
+            keyPairList.add(null, jsonData.data);
+            setup.update();
+            setIntro();
+            showAlert(SUCCESS_IMPORT_GAME);
+        } else {
+            showAlert(FAILED_OPEN_SAMPLE_GAME);
+        }
+
+    }).fail(function() {showAlert(FAILED_OPEN_SAMPLE_GAME)});
+}
+
+var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = window.location.search.substring(1),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+        }
+    }
+    return false;
+};
+
+$( document ).ready(function() {
+    var sampleID = getUrlParameter('sampleID');
+    console.log('Load game' + sampleID);
+    if (sampleID) {
+        readGameData(sampleID);
+    }
+});
