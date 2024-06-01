@@ -21,6 +21,8 @@ const ERROR_MAX_SIZE_ALLOW = 'File quá nặng, xin hãy chọn file dưới 50M
 
 const ERROR_WRONG_GAME = 'File vừa nhập không hợp lệ';
 const SUCCESS_IMPORT_GAME = 'Nhập file thành công';
+const SUCCESS_OPEN_SAMPLE_GAME = 'Đã mở ví dụ thành công';
+const FAILED_OPEN_SAMPLE_GAME = 'Không tìm thấy ví dụ. Hãy kiểm tra lại đường dẫn.';
 
 // Font Family
 window.fontList = [
@@ -527,15 +529,16 @@ window.toBase64 = (file, onload) => {
     }
   }
   
-  
+  let setup = new Setup();
   
   /* MAIN */
   $(document).ready(function () {
-    let setup = new Setup();
     setup.initial();
     setup.update();
     window.questionList = new QuestionList();
     questionList.add();
+  });
+  
     $(document).on('click', '#btnAdd', () => {
       let inputAmount = $('#inputAmount').val();
       $.isNumeric(inputAmount) ? questionList.add(inputAmount) : questionList.add();
@@ -657,7 +660,7 @@ window.toBase64 = (file, onload) => {
     });
   
   
-  });
+
 
   
   window.questionPanel = '<div class="question"><div class="input-group mr-sm-2"><div class="input-group-prepend"><div class="input-group-text"><strong>1</strong></div></div><input type="text" class="form-control inputQuestion" placeholder="Từ sai"></div><div class="input-group mr-sm-2 mt-2"><input type="text" class="form-control inputAnswer" placeholder="Đáp án"></div></div>';
@@ -668,3 +671,44 @@ window.setting = {
   gameIntro: {gameIntro_title:'', gameIntro_detail:''}
 };
 
+// OpenGameSampleHelper.js
+
+function readGameData(sampleName) {
+  $.getJSON('gameFileData/' + sampleName, function(jsonData) {
+      if (jsonData) {
+          window.setting = jsonData.setting;
+          window.questionList.load(jsonData.data.data);
+          setIntro();
+          setup.update();
+          replay();
+          showAlert(SUCCESS_IMPORT_GAME);
+      } else {
+          showAlert(FAILED_OPEN_SAMPLE_GAME);
+      }
+
+  }).fail(function() {showAlert(FAILED_OPEN_SAMPLE_GAME)});
+}
+
+var getUrlParameter = function getUrlParameter(sParam) {
+  var sPageURL = window.location.search.substring(1),
+      sURLVariables = sPageURL.split('&'),
+      sParameterName,
+      i;
+
+  for (i = 0; i < sURLVariables.length; i++) {
+      sParameterName = sURLVariables[i].split('=');
+
+      if (sParameterName[0] === sParam) {
+          return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+      }
+  }
+  return false;
+};
+
+$( document ).ready(function() {
+  var sampleID = getUrlParameter('sampleID');
+  console.log('Load game' + sampleID);
+  if (sampleID) {
+      readGameData(sampleID);
+  }
+});
