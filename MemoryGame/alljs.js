@@ -597,11 +597,50 @@ $(document).ready(function () {
     });
     $(document).on('change', '.uploadFile', function () {
         let file = $(this)[0].files[0];
-        toBase64(file, (base64) => {
-            let index = $(this).parents('.question').index();
-            keyPairList.data[index].setImage(base64, index);
-        });
+        let index = $(this).parents('.question').index();
+
+
+
+        // Not change to Webp if image is image/gif
+        const fileType = file['type'];
+        if (fileType != 'image/gif') {
+            console.log('Convert to Webp');
+            processFile(file, index);
+        } else {
+            toBase64(file, (base64) => {
+                keyPairList.data[index].setImage(base64, index);
+            });
+        }
+
     });
+
+    function processFile(file, index) {
+        if (!file) {
+          return;
+        }
+        // Load the data into an image
+        new Promise(function (resolve, reject) {
+          let rawImage = new Image();
+      
+          rawImage.addEventListener("load", function () {
+            resolve(rawImage);
+          });
+      
+          rawImage.src = URL.createObjectURL(file);
+        })
+          .then(function (rawImage) {
+            let canvas = document.createElement('canvas');
+            let ctx = canvas.getContext("2d");
+            canvas.width = rawImage.width;
+            canvas.height = rawImage.height;
+            ctx.drawImage(rawImage, 0, 0);
+      
+            const output = canvas.toDataURL("image/webp",0.8).replace('data:', '').replace(/^.+,/, '');
+      
+            keyPairList.data[index].setImage(output, index);
+          });
+      }
+
     $(document).on('input', '.inputQuestion', function () {
         let index = $(this).parents('.question').index();
         keyPairList.data[index].setValue($(this).val(), index);
