@@ -710,20 +710,8 @@ new Promise(function (resolve, reject) {
 
     const output = canvas.toDataURL("image/webp",0.8).replace('data:', '').replace(/^.+,/, '');
 
-    if (file.type.includes(CONST_AUDIO)) {
-      window.questionList[currentChosenIndex].base64 = `data:audio/mp3;base64,${output}`;
-      window.questionList[currentChosenIndex].type = CONST_AUDIO;
-    }
-
-    if (file.type.includes(CONST_VIDEO)) {
-      window.questionList[currentChosenIndex].base64 = `data:video/mp4;base64,${output}`;
-      window.questionList[currentChosenIndex].type = CONST_VIDEO;
-    }
-
-    if (file.type.includes(CONST_IMAGE)) {
-      window.questionList[currentChosenIndex].base64 = `data:image/gif;base64,${output}`;
-      window.questionList[currentChosenIndex].type = CONST_IMAGE;
-    }
+    window.questionList[currentChosenIndex].base64 = `data:image/gif;base64,${output}`;
+    window.questionList[currentChosenIndex].type = CONST_IMAGE;
   });
 }
 // Upload question file
