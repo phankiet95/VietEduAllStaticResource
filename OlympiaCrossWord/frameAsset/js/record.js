@@ -207,9 +207,18 @@ $(document).ready(function () {
       return;
     }
     let currentQuestion = $(this).parents('.question').index();
-    toBase64(file, (base64) => {
-      slideData.data[currentQuestion].file = { name: file.name, type: file.type.replace(/(.+)(\/.+)/, '$1'), base64 };
-    });
+
+    const fileType = file['type'];
+    // Not change to Webp if image is image/gif
+    if (fileType != 'image/gif' && !file.type.includes(CONST_AUDIO) && !file.type.includes(CONST_VIDEO)) {
+      console.log('Convert to Webp');
+      processFile(file, currentQuestion);
+    } else {
+      toBase64(file, (base64) => {
+        slideData.data[currentQuestion].file = { name: file.name, type: file.type.replace(/(.+)(\/.+)/, '$1'), base64 };
+      });
+    }
+
     $(this).parent().parent().siblings('.questionFileName').html(file.name);
     $(this)[0].value = null;
   });
@@ -221,5 +230,30 @@ $(document).ready(function () {
     $(this).parent().parent().siblings('.questionFileName').html('');
 
   });
+
+  function processFile(file, curques) {
+    if (!file) {
+      return;
+    }
+    // Load the data into an image
+    new Promise(function (resolve, reject) {
+      let rawImage = new Image();
+  
+      rawImage.addEventListener("load", function () {
+        resolve(rawImage);
+      });
+  
+      rawImage.src = URL.createObjectURL(file);
+    })
+      .then(function (rawImage) {
+        let canvas = document.createElement('canvas');
+        let ctx = canvas.getContext("2d");
+        canvas.width = rawImage.width;
+        canvas.height = rawImage.height;
+        ctx.drawImage(rawImage, 0, 0);
+        const output = canvas.toDataURL("image/webp",0.8).replace('data:', '').replace(/^.+,/, '');
+        slideData.data[curques].file = { name: file.name, type: file.type.replace(/(.+)(\/.+)/, '$1'), base64:output };
+      });
+  }
   
 });
