@@ -42,7 +42,6 @@ function addQuestion(object) {
     $('#slideList').css('font-family', slideData.font.fontFamily);
     $('#slidePage').css('font-family', slideData.font.fontFamily);
  
-  });
     $('#btnAddQuestion').bind({
       click: function () {
         addQuestion();
@@ -77,6 +76,8 @@ function addQuestion(object) {
         }
       },
     });
+  });
+
     //Process inputs from user and render a word
     $(document).on('input', '.question .inputQuestion', function () {
       slideData.data[$(this).parents('.question').index()].question = $(this).val();
