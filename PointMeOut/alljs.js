@@ -1,3 +1,6 @@
+/* timer.js */
+$(document).ready(function () { const data = {}; window.timerInit = (selector, seconds = null) => { data[`${selector}`] = { started: false, inteval: null }; $(`#${selector}.timer_container`).children('ul').length <= 0 && $(`#${selector}.timer_container`).append('<ul class="flip minutePlay"> <li class="before"> <a href="#"> <div class="up"> <div class="shadow"></div> <div class="inn"></div> </div> <div class="down"> <div class="shadow"></div> <div class="inn"></div> </div> </a> </li> <li class="active"> <a href="#"> <div class="up"> <div class="shadow"></div> <div class="inn"></div> </div> <div class="down"> <div class="shadow"></div> <div class="inn"></div> </div> </a> </li> </ul> <ul class="flip secondPlay"> <li class="before"> <a href="#"> <div class="up"> <div class="shadow"></div> <div class="inn"></div> </div> <div class="down"> <div class="shadow"></div> <div class="inn"></div> </div> </a> </li> <li class="active"> <a href="#"> <div class="up"> <div class="shadow"></div> <div class="inn"></div> </div> <div class="down"> <div class="shadow"></div> <div class="inn"></div> </div> </a> </li> </ul>'); if (seconds != null) { let timer = [...(seconds + '')]; timer.length == 1 && timer.unshift('0'); $(`#${selector}.timer_container`).attr('tens', timer[0]); $(`#${selector}.timer_container`).attr('ones', timer[1]); } data[`${selector}`].tens = parseInt($(`#${selector}.timer_container`).attr('tens')); data[`${selector}`].ones = parseInt($(`#${selector}.timer_container`).attr('ones')); $(`#${selector} .minutePlay .before .inn, #${selector} .minutePlay .active .inn`).text(data[`${selector}`].tens); $(`#${selector} .secondPlay .before .inn, #${selector} .secondPlay .active .inn`).text(data[`${selector}`].ones); $(`#${selector}.timer_container`).addClass('play'); }; window.timerStart = (selector, setting = { unit: 1000, count: 'down', limit: [0, 0], continuous: false, autoplay: false }, timeUp = () => {}) => { const { unit, count, limit, continuous, autoplay } = setting; if (data[`${selector}`].started == false) { autoplay && onesPlay(); data[`${selector}`].inteval = setInterval(onesPlay, unit); data[`${selector}`].started = true; } function onesPlay() { if (count == 'down') { if (!continuous && data[`${selector}`].tens <= limit[0] && data[`${selector}`].ones <= limit[1]) { timerStop(selector); timeUp(); } else { data[`${selector}`].ones == 0 && tensPlay(); data[`${selector}`].ones = data[`${selector}`].ones > 0 ? (data[`${selector}`].ones - 1) % 10 : 9; $(`#${selector} .secondPlay li`).toggleClass('active before'); } } else { if (!continuous && data[`${selector}`].tens >= limit[0] && data[`${selector}`].ones >= limit[1]) { timerStop(selector); timeUp(); } else { data[`${selector}`].ones == 9 && tensPlay(); data[`${selector}`].ones = (data[`${selector}`].ones + 1) % 10; $(`#${selector} .secondPlay li`).toggleClass('active before'); } } $(`#${selector} .secondPlay .active .inn`).text(data[`${selector}`].ones); } function tensPlay() { if (count == 'down') { data[`${selector}`].tens = data[`${selector}`].tens > 0 ? (data[`${selector}`].tens - 1) % 10 : limit[0]; } else { data[`${selector}`].tens = data[`${selector}`].tens >= limit[0] ? 0 : (data[`${selector}`].tens + 1) % 10; } $(`#${selector} .minutePlay li`).toggleClass('active before'); $(`#${selector} .minutePlay .active .inn`).text(data[`${selector}`].tens); } }; window.timerReset = (selector) => { timerStop(selector); timerInit(selector); data[`${selector}`].started = false; if (data[`${selector}`].inteval != null) clearInterval(data[`${selector}`].inteval); }; window.timerStop = (selector) => { data[`${selector}`].started = false; if (data[`${selector}`].inteval != null) clearInterval(data[`${selector}`].inteval); }; window.timerCheck = (selector) => parseInt(`${data[`${selector}`].tens}${data[`${selector}`].ones}`); });
+  
 // Fie type
 const CONST_AUDIO = 'audio';
 const CONST_ICON = 'icon';
@@ -23,7 +26,6 @@ const ERROR_WRONG_GAME = 'File vừa nhập không hợp lệ';
 const SUCCESS_IMPORT_GAME = 'Nhập file thành công';
 const SUCCESS_OPEN_SAMPLE_GAME = 'Đã mở ví dụ thành công';
 const FAILED_OPEN_SAMPLE_GAME = 'Không tìm thấy ví dụ. Hãy kiểm tra lại đường dẫn.';
-
 // Font Family
 window.fontList = [
     { name: 'Arial' },
@@ -118,12 +120,14 @@ class Setup {
           let player = document.getElementById('backgroundSlideVideo');
           if (file.type.includes('video')) {
             $('.slideList')[0].style.removeProperty('background-image');
-            player.setAttribute('src', `data:video/mp4;base64,${base64}`);
-            //setting.background = { type: 'video', name: file.name, base64 };
+            base64 = `data:video/mp4;base64,${base64}`;
+            player.setAttribute('src', base64);
+            setting.background = { type: 'video', name: file.name, base64 };
           } else if (file.type.includes('image')) {
             player.removeAttribute('src');
-            $('.slideList').css('background-image', 'url(' + `data:image/gif;base64,${base64}` + ')');
-            //setting.background = { type: 'image', name: file.name, base64 };
+            base64 = `data:image/gif;base64,${base64}`;
+            $('.slideList').css('background-image', 'url(' + base64 + ')');
+            setting.background = { type: 'image', name: file.name, base64 };
           }
         });
         $(this).val(null);
@@ -530,6 +534,7 @@ window.toBase64 = (file, onload) => {
   }
   
   let setup = new Setup();
+
   
   /* MAIN */
   $(document).ready(function () {
@@ -538,7 +543,7 @@ window.toBase64 = (file, onload) => {
     window.questionList = new QuestionList();
     questionList.add();
   });
-  
+
     $(document).on('click', '#btnAdd', () => {
       let inputAmount = $('#inputAmount').val();
       $.isNumeric(inputAmount) ? questionList.add(inputAmount) : questionList.add();
@@ -623,6 +628,7 @@ window.toBase64 = (file, onload) => {
                     window.questionList.load(data.data);
                     setIntro();
                     setup.update();
+                    loadBackground();
                     replay();
                     showAlert(SUCCESS_IMPORT_GAME);
                 } else {
@@ -646,6 +652,7 @@ window.toBase64 = (file, onload) => {
               window.questionList.load(jsonData.data.data);
               setIntro();
               setup.update();
+              loadBackground();
               replay();
               showAlert(SUCCESS_IMPORT_GAME);
             } else {
@@ -660,7 +667,19 @@ window.toBase64 = (file, onload) => {
     });
   
   
-
+    function loadBackground() {
+      let player = document.getElementById('backgroundSlideVideo');
+      console.log('setting.background.type = ',setting.background.type);
+      console.log(setting.background);
+      if (setting.background.type.includes('video')) {
+        $('.slideList')[0].style.removeProperty('background-image');
+        player.setAttribute('src', setting.background.base64);
+      } else if (setting.background.type.includes('image')) {
+        player.removeAttribute('src');
+        $('.slideList').css('background-image', 'url(' + setting.background.base64 + ')');
+      }
+    }
+  
 
   
   window.questionPanel = '<div class="question"><div class="input-group mr-sm-2"><div class="input-group-prepend"><div class="input-group-text"><strong>1</strong></div></div><input type="text" class="form-control inputQuestion" placeholder="Từ sai"></div><div class="input-group mr-sm-2 mt-2"><input type="text" class="form-control inputAnswer" placeholder="Đáp án"></div></div>';
@@ -680,6 +699,7 @@ function readGameData(sampleName) {
           window.questionList.load(jsonData.data.data);
           setIntro();
           setup.update();
+          loadBackground();
           replay();
           showAlert(SUCCESS_IMPORT_GAME);
       } else {
