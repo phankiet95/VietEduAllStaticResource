@@ -1147,10 +1147,10 @@ var typed = new Typed('#question-text', {
 
 
 let answerPool = [];
-answerPool.push(window.questionList[currentShowingQuestion].answer);
-answerPool.push(window.questionList[currentShowingQuestion].otherAnswer1);
-answerPool.push(window.questionList[currentShowingQuestion].otherAnswer2);
-answerPool.push(window.questionList[currentShowingQuestion].otherAnswer3);
+answerPool.push(window.questionList[currentShowingQuestion].answer != null ? window.questionList[currentShowingQuestion].answer : '');
+answerPool.push(window.questionList[currentShowingQuestion].otherAnswer1 != null ? window.questionList[currentShowingQuestion].otherAnswer1 : '');
+answerPool.push(window.questionList[currentShowingQuestion].otherAnswer2 != null ? window.questionList[currentShowingQuestion].otherAnswer2 : '');
+answerPool.push(window.questionList[currentShowingQuestion].otherAnswer3 != null ? window.questionList[currentShowingQuestion].otherAnswer3 : '');
 shuffle(answerPool);
 console.log(answerPool);
 $('#answer-text1').text('A. ' + answerPool[0]);
