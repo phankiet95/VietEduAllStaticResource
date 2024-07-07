@@ -29,16 +29,6 @@
   <link rel="stylesheet" href="CustomAsset/css/main.css">
   <link rel="stylesheet" href="CustomAsset/css/slide.css">
 
-  <!-- Be injected by Back-end -->
-  <style>
-    @charset "UTF-8";
-
-  </style>
-
-  <script type="text/javascript">
-
-  </script>
-  <!-- Be injected by Back-end -->
   <!-- JS -->
   <!-- 1. jquery -->
   <script src="frameAsset/js/jquery-3.6.0.min.js"></script>
@@ -47,7 +37,6 @@
   <!-- 2. Const Variable -->
   <script src="frameAsset/js/GlobalVariable.js"></script>
   <script src="frameAsset/js/GameFrameAsset.js"></script>
-  <script src="frameAsset/js/GameVideoAsset.js"></script>
   <script src="frameAsset/js/gameFrame.js"></script>
   <script src="frameAsset/js/jquery.injectCSS.js"></script>
 
@@ -55,8 +44,9 @@
   <script src="frameAsset/js/UtilityFuntion.js"></script>
   <script src="frameAsset/js/GamePlayAssetLoader.js"></script>
   <script src="frameAsset/js/GameIntro.js"></script>
-  <script src="frameAsset/js/SetupPanel.js"></script>
   <script src="frameAsset/js/record.js"></script> <!-- Only inject in case game has questions-media files -->
+  <script src="frameAsset/js/SetupPanel.js"></script>
+
 
   <!-- 4. Custom Asset -->
   <script src="CustomAsset/js/GameCustomAsset.js"></script>
@@ -67,6 +57,7 @@
   <script src="CustomAsset/js/main.js"></script>
   <script src="CustomAsset/js/countdown.js"></script>
   <script src="CustomAsset/js/OpenGameSampleHelper.js"></script>
+
 
 </head>
 
@@ -128,7 +119,7 @@
           <i class="fa-solid fa-equals hvr-bounce-in" id="questionClose"></i>
           <!-- Media in question-->
           <div id="questionMediaPanel">
-            <div style="height: 97%; ">
+            <div style="height: 97%; width: 90%; ">
               <img id ="questionMedia_img" class="d-none hvr-bob" style="max-width:100%; border-radius: 20px; height: 90%;">
               <audio id="questionMedia_audio" class="d-none" controls="" autoplay style="width:50%" ></audio>
               <video id="questionMedia_video" class="d-none" controls="none" style="max-width:80%; border-radius: 20px; pointer-events: auto; height: 80%;"></video>
@@ -264,5 +255,7 @@
   <div id="fordownload">
 
   </div>
+
 </body>
+
 </html>

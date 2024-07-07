@@ -35,20 +35,11 @@ $(document).ready(function () {
     slideData.setting.customBackground.type = 'image';
     slideData.setting.customBackground.base64 = randomSelect.base64;
 
-
-    // init available Background Video List
-    loadSelectOption('.setupPanel #availableBackgroundVideoList', window.availableVideo, false);
-
-
     // init Available Texture effect
     loadSelectOption('.setupPanel #textureEffectList', window.animationTexture, false);
     $('.setupPanel #textureEffectList').val('Cloud');
     let selectedValue = window.animationTexture.find((el) => el.name == 'Cloud');
     setBackgroundPicture('#backgroundAnimationLayer', selectedValue.base64);
-
-    // Clone SetupPanel
-    $('#setupPanel2').html($('#setupPanel').html());
-    
 });
 
 
@@ -96,9 +87,13 @@ $(document).on('change', currentTab+' .setupPanel #volumeRange', function () {
 // Change availableBackgroundList
 $(document).on('change', currentTab+' .setupPanel #availableBackgroundList', function () {
     destroyMedia();
+    console.log('Change availableBackgroundList');
     if (this.value == 'Không chọn') return;
     let selectedValue = window.availablePic.find((el) => el.name == this.value);
     setBackgroundPicture(currentTab+' #backgroundPictureLayer', selectedValue.base64);
+    slideData.setting.background.type = 'image';
+    slideData.setting.customBackground.type = 'image';
+    slideData.setting.customBackground.base64 = selectedValue.base64;
 });
 
 // Change availableBackgroundVideoList
@@ -118,6 +113,16 @@ $(document).on('change', currentTab+' .setupPanel #inputBackgroundMedia', functi
         return;
     }
     $(this).val(null);
+
+
+
+// Not change to Webp if image is image/gif
+if (file.type != 'image/gif' && !file.type.includes(CONST_AUDIO) && !file.type.includes(CONST_VIDEO)) {
+    console.log('Convert to Webp');
+    // clear current element background
+    destroyMedia();
+    processFile(file, 0, true);
+} else {
     toBase64(file, (base64) => {
         // clear current element background
         destroyMedia();
@@ -136,6 +141,7 @@ $(document).on('change', currentTab+' .setupPanel #inputBackgroundMedia', functi
 
         }
     });
+    }
 });
 
 // Choose Background audio
@@ -177,10 +183,11 @@ $(document).on('click', currentTab+' .setupPanel #destroyBackgroundAudio', funct
 });
 
 function destroyMedia(){
+    console.log('Destroy background');
     slideData.setting.background.type = '';
     slideData.setting.background.base64 = '';
-    $(currentTab+' #backgroundSlideVideo').attr('src','');
-    setBackgroundPicture(currentTab+' #backgroundPictureLayer', null);
+    $('#backgroundSlideVideo').attr('src','');
+    setBackgroundPicture('#backgroundPictureLayer', null);
 }
 
 $(document).on('change', '.setupPanel .color', function () {

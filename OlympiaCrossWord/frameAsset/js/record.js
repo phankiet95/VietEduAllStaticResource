@@ -199,6 +199,7 @@ $(document).ready(function () {
     $('#questionList > .question').eq($('#recAudioModal').attr('questionid')).find('.fileName').html('Bản ghi âm');
   });
 
+
   //get file from mediaPanel and save file as base64
   $(document).on('change', '.RecordingUtilities_questionFilePanel .uploadFile', function () {
     let file = $(this)[0].files[0];
@@ -231,29 +232,37 @@ $(document).ready(function () {
 
   });
 
-  function processFile(file, curques) {
-    if (!file) {
-      return;
-    }
-    // Load the data into an image
-    new Promise(function (resolve, reject) {
-      let rawImage = new Image();
-  
-      rawImage.addEventListener("load", function () {
-        resolve(rawImage);
-      });
-  
-      rawImage.src = URL.createObjectURL(file);
-    })
-      .then(function (rawImage) {
-        let canvas = document.createElement('canvas');
-        let ctx = canvas.getContext("2d");
-        canvas.width = rawImage.width;
-        canvas.height = rawImage.height;
-        ctx.drawImage(rawImage, 0, 0);
-        const output = canvas.toDataURL("image/webp",0.8).replace('data:', '').replace(/^.+,/, '');
-        slideData.data[curques].file = { name: file.name, type: file.type.replace(/(.+)(\/.+)/, '$1'), base64:output };
-      });
-  }
-  
 });
+
+
+function processFile(file, curques, isbackground=false) {
+  if (!file) {
+    return;
+  }
+  // Load the data into an image
+  new Promise(function (resolve, reject) {
+    let rawImage = new Image();
+
+    rawImage.addEventListener("load", function () {
+      resolve(rawImage);
+    });
+
+    rawImage.src = URL.createObjectURL(file);
+  })
+    .then(function (rawImage) {
+      let canvas = document.createElement('canvas');
+      let ctx = canvas.getContext("2d");
+      canvas.width = rawImage.width;
+      canvas.height = rawImage.height;
+      ctx.drawImage(rawImage, 0, 0);
+      const output = canvas.toDataURL("image/webp",0.8).replace('data:', '').replace(/^.+,/, '');
+      if (!isbackground) {
+        slideData.data[curques].file = { name: file.name, type: file.type.replace(/(.+)(\/.+)/, '$1'), base64:output };
+      } else {
+        setBackgroundPicture(currentTab+' #backgroundPictureLayer', output);
+        slideData.setting.background.type = 'image';
+        slideData.setting.customBackground.type = 'image';
+        slideData.setting.customBackground.base64 = output;
+      }
+    });
+}
