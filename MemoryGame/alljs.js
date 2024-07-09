@@ -800,6 +800,6 @@ $( document ).ready(function() {
     var sampleID = getUrlParameter('sampleID');
     console.log('Load game' + sampleID);
     if (sampleID) {
-        readGameData(sampleID);
+        readGameData(sampleID + ".VietEduSoft");
     }
 });
