@@ -179,6 +179,11 @@ class Setup {
     }
   });
 
+  
+$(document).on('click', '#fullscreenbtn', function () {
+  toggle_full_screen();
+});
+
   $(document).on('click', '#gameIntroBtn', function () {
     console.log('open/close intro');
     $('#gameIntro').toggleClass('active');
@@ -669,12 +674,10 @@ window.toBase64 = (file, onload) => {
   
     function loadBackground() {
       let player = document.getElementById('backgroundSlideVideo');
-      console.log('setting.background.type = ',setting.background.type);
-      console.log(setting.background);
-      if (setting.background.type.includes('video')) {
+      if ( setting.background && setting.background.type && setting.background.type.includes('video')) {
         $('.slideList')[0].style.removeProperty('background-image');
         player.setAttribute('src', setting.background.base64);
-      } else if (setting.background.type.includes('image')) {
+      } else if (setting.background && setting.background.type && setting.background.type.includes('image')) {
         player.removeAttribute('src');
         $('.slideList').css('background-image', 'url(' + setting.background.base64 + ')');
       }
@@ -729,6 +732,6 @@ $( document ).ready(function() {
   var sampleID = getUrlParameter('sampleID');
   console.log('Load game' + sampleID);
   if (sampleID) {
-      readGameData(sampleID);
+    readGameData(sampleID + ".VietEduSoft");
   }
 });
