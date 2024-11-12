@@ -520,15 +520,16 @@ $(document).on('click', '#exportHtml', function () {
   
   $(document).on('click', '#exportDataFile', function () {
     console.log('Start download Data');
-    window.isLoading(true);
+    //window.isLoading(true);
     // Lưu game Intro
     saveIntro();
     let dataSaved = JSON.stringify({ data: window.questionList, setting });
+    console.log(dataSaved);
     download(`${window.setting.gameinfo.name}_${getTimeForFileName()}.VietEduSoft`, dataSaved);
   
-    setTimeout(() => {
-      window.isLoading(false);
-    }, 1000)
+    // setTimeout(() => {
+    //   window.isLoading(false);
+    // }, 1000)
   
   });
   
