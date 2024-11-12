@@ -534,6 +534,7 @@ $(document).on('click', '#exportHtml', function () {
   
   });
 
+  
   function downloadPlainText(filename, text) {
     console.log('New Download function');
     const blob = new Blob([text], { type: 'text/plain' });
@@ -545,6 +546,7 @@ $(document).on('click', '#exportHtml', function () {
     document.body.removeChild(link);
     URL.revokeObjectURL(link.href);
   }
+
   
   $(document).on('change', '#importHtml', function () {
     try {

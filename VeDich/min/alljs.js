@@ -524,13 +524,26 @@ $(document).on('click', '#exportHtml', function () {
     // Lưu game Intro
     saveIntro();
     let dataSaved = JSON.stringify({ data: window.questionList, setting });
-    download(`${window.setting.gameinfo.name}_${getTimeForFileName()}.VietEduSoft`, dataSaved);
+    //download(`${window.setting.gameinfo.name}_${getTimeForFileName()}.VietEduSoft`, dataSaved);
+    downloadPlainText(`${window.setting.gameinfo.name}_${getTimeForFileName()}.VietEduSoft`, dataSaved);
   
     setTimeout(() => {
       window.isLoading(false);
     }, 1000)
   
   });
+
+  function downloadPlainText(filename, text) {
+    console.log('New Download function');
+    const blob = new Blob([text], { type: 'text/plain' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(link.href);
+  }
   
   $(document).on('change', '#importHtml', function () {
     try {
