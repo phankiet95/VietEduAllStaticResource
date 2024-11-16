@@ -136,6 +136,7 @@ $(document).ready(function () {
       let opac = slideData.setting.background.colorOverlayOpacity + '%';
       $('#backgroundColorLayer').css('Opacity',opac);
       $('#countdown').text(second);
+      $('#countdown_media').text(second);
       $('#setupPanel .basic .countdown').val(second);
       $('#setupPanel .color').val(color);
       $('#setupPanel .bgColor').val(bgColor);
@@ -257,6 +258,7 @@ $(document).ready(function () {
         //loadQuestionFromListData();
         updateSlideView('loadFile');
         $('#countdown').text(window.slideData.setting.countdown.second);
+        $('#countdown_media').text(window.slideData.setting.countdown.second);
         $('#config_countdown').val(window.slideData.setting.countdown.second);
 
         $('#colorOverlayRange').val(window.slideData.setting.background.colorOverlayOpacity);
@@ -354,6 +356,7 @@ $(document).ready(function () {
 
   $('body').on('change', '#setupPanel .basic .countdown', function () {
     $('#countdown').text($(this).val());
+    $('#countdown_media').text($(this).val());
     slideData.setting.countdown.second = $(this).val();
   });
 
